@@ -1,1 +1,177 @@
-[]
+{
+  "meta": {
+    "projectName": "Linked-Pedia",
+    "version": "1.0.0",
+    "source": "project_prd.md",
+    "description": "Tasks generated from PRD features",
+    "totalTasksGenerated": 15,
+    "tasksIncluded": 15
+  },
+  "tasks": [
+    {
+      "id": "FEAT-001",
+      "title": "Inscription et Connexion",
+      "description": "Permettre aux utilisateurs de créer un compte et de se connecter à l'application.",
+      "status": "todo",
+      "dependencies": [],
+      "priority": "high",
+      "details": "Basé sur la section 3.1 (FEAT-001) et 3.2 (FEAT-001) du project_prd.md. Doit être simple, rapide et sécurisé.",
+      "testStrategy": "Tester les flux d'inscription et de connexion avec des cas valides et invalides.",
+      "subtasks": []
+    },
+    {
+      "id": "FEAT-002",
+      "title": "Liaison Compte LinkedIn",
+      "description": "Permettre à l'utilisateur de connecter son profil LinkedIn à l'application via l'API officielle.",
+      "status": "todo",
+      "dependencies": ["FEAT-001"],
+      "priority": "high",
+      "details": "Basé sur la section 3.1 (FEAT-002) et 3.2 (FEAT-002) du project_prd.md. Nécessite l'intégration de l'API LinkedIn.",
+      "testStrategy": "Tester la connexion réussie et la gestion des erreurs d'autorisation.",
+      "subtasks": []
+    },
+    {
+      "id": "FEAT-003",
+      "title": "Audit de Profil LinkedIn",
+      "description": "Analyser le profil LinkedIn de l'utilisateur (en tenant compte du SSI) et fournir un rapport détaillé avec des recommandations d'optimisation personnalisées.",
+      "status": "todo",
+      "dependencies": ["FEAT-002"],
+      "priority": "high",
+      "details": "Basé sur la section 3.1 (FEAT-003), 3.2 (FEAT-003) et le cas d'utilisation associé du project_prd.md. Doit être insightful et actionable.",
+      "testStrategy": "Vérifier la pertinence de l'analyse et des recommandations pour différents profils.",
+      "subtasks": []
+    },
+    {
+      "id": "FEAT-004",
+      "title": "Générateur de Posts Texte",
+      "description": "Générer des brouillons de posts LinkedIn basés sur des thèmes, axes ou catégories choisis par l'utilisateur.",
+      "status": "todo",
+      "dependencies": ["FEAT-001"],
+      "priority": "high",
+      "details": "Basé sur la section 3.1 (FEAT-004) et 3.2 (FEAT-004) du project_prd.md. Doit être créatif et pertinent.",
+      "testStrategy": "Évaluer la qualité et la pertinence des brouillons générés pour divers thèmes.",
+      "subtasks": []
+    },
+    {
+      "id": "FEAT-005",
+      "title": "Générateur de Posts à partir de Fichier",
+      "description": "Analyser le contenu d'un fichier soumis (image, document, lien) et générer un post LinkedIn pertinent basé sur ce contenu.",
+      "status": "todo",
+      "dependencies": ["FEAT-001"],
+      "priority": "medium",
+      "details": "Basé sur la section 3.1 (FEAT-005) et 3.2 (FEAT-005) du project_prd.md. Doit être intelligent et pratique.",
+      "testStrategy": "Tester la génération à partir de différents types de fichiers et de liens.",
+      "subtasks": []
+    },
+    {
+      "id": "FEAT-006",
+      "title": "Générateur d'Idées de Posts",
+      "description": "Proposer à l'utilisateur des idées de posts basées sur un grand thème, explorant différents angles et formats.",
+      "status": "todo",
+      "dependencies": ["FEAT-001"],
+      "priority": "high",
+      "details": "Basé sur la section 3.1 (FEAT-006) et 3.2 (FEAT-006) du project_prd.md. Doit être inspirant et varié.",
+      "testStrategy": "Évaluer la diversité et la pertinence des idées générées pour différents thèmes.",
+      "subtasks": []
+    },
+    {
+      "id": "FEAT-007",
+      "title": "Optimiseur de Posts",
+      "description": "Analyser un post rédigé par l'utilisateur et proposer 3 versions optimisées pour améliorer la pertinence, l'accroche et l'engagement potentiel.",
+      "status": "todo",
+      "dependencies": ["FEAT-001"],
+      "priority": "high",
+      "details": "Basé sur la section 3.1 (FEAT-007) et 3.2 (FEAT-007) du project_prd.md. Doit être utile et intelligent.",
+      "testStrategy": "Comparer les versions optimisées avec l'original et évaluer les suggestions.",
+      "subtasks": []
+    },
+    {
+      "id": "FEAT-008",
+      "title": "Générateur d'Accroches",
+      "description": "Générer des suggestions d'accroches percutantes pour un post, potentiellement basées sur l'analyse des tendances actuelles sur LinkedIn.",
+      "status": "todo",
+      "dependencies": ["FEAT-001"],
+      "priority": "high",
+      "details": "Basé sur la section 3.1 (FEAT-008) et 3.2 (FEAT-008) du project_prd.md. Doit être accrocheur et basé sur les données.",
+      "testStrategy": "Évaluer la pertinence et l'impact potentiel des accroches générées.",
+      "subtasks": []
+    },
+    {
+      "id": "FEAT-009",
+      "title": "Tableau de Bord des Posts",
+      "description": "Fournir une interface centralisée pour visualiser et gérer tous les posts (brouillons, programmés, publiés).",
+      "status": "todo",
+      "dependencies": ["FEAT-001"],
+      "priority": "high",
+      "details": "Basé sur la section 3.1 (FEAT-009) et 3.2 (FEAT-009) du project_prd.md. Doit être clair et organisé.",
+      "testStrategy": "Vérifier l'affichage correct et la gestion des différents statuts de posts.",
+      "subtasks": []
+    },
+    {
+      "id": "FEAT-010",
+      "title": "Programmation de Posts",
+      "description": "Permettre à l'utilisateur de programmer la publication de ses posts directement sur son compte LinkedIn à une date et heure spécifiées.",
+      "status": "todo",
+      "dependencies": ["FEAT-002", "FEAT-009"],
+      "priority": "high",
+      "details": "Basé sur la section 3.1 (FEAT-010), 3.2 (FEAT-010) et le cas d'utilisation associé du project_prd.md. Doit être fiable et automatisé.",
+      "testStrategy": "Tester la programmation et la publication effective des posts à l'heure prévue.",
+      "subtasks": []
+    },
+    {
+      "id": "FEAT-011",
+      "title": "Statistiques de Performance",
+      "description": "Afficher les métriques clés (impressions, interactions, taux d'engagement, etc.) pour les posts publiés via l'application.",
+      "status": "todo",
+      "dependencies": ["FEAT-002", "FEAT-010"],
+      "priority": "high",
+      "details": "Basé sur la section 3.1 (FEAT-011) et 3.2 (FEAT-011) du project_prd.md. Doit être transparent et informatif.",
+      "testStrategy": "Vérifier l'exactitude des métriques affichées par rapport aux données LinkedIn.",
+      "subtasks": []
+    },
+    {
+      "id": "FEAT-012",
+      "title": "Conseils Personnalisés",
+      "description": "Fournir des recommandations basées sur l'analyse des statistiques de performance et le profil de l'utilisateur pour améliorer sa stratégie de contenu et son personal branding.",
+      "status": "todo",
+      "dependencies": ["FEAT-003", "FEAT-011", "FEAT-015"],
+      "priority": "high",
+      "details": "Basé sur la section 3.1 (FEAT-012) et 3.2 (FEAT-012) du project_prd.md. Doit être intelligent et actionable.",
+      "testStrategy": "Évaluer la pertinence et l'utilité des conseils personnalisés.",
+      "subtasks": []
+    },
+    {
+      "id": "FEAT-013",
+      "title": "Gestion des Sous-Comptes",
+      "description": "Permettre aux utilisateurs (ghostwriters) de lier et de gérer jusqu'à 3 profils LinkedIn distincts sous un même compte Linked-Pedia.",
+      "status": "todo",
+      "dependencies": ["FEAT-001", "FEAT-002"],
+      "priority": "medium",
+      "details": "Basé sur la section 3.1 (FEAT-013) et 3.2 (FEAT-013) du project_prd.md. Doit être flexible et efficace.",
+      "testStrategy": "Tester l'ajout, la gestion et la commutation entre plusieurs sous-comptes.",
+      "subtasks": []
+    },
+    {
+      "id": "FEAT-014",
+      "title": "Mode Assistant",
+      "description": "Guider pas à pas les nouveaux utilisateurs ou les débutants dans l'utilisation des fonctionnalités clés et l'optimisation de leur présence LinkedIn.",
+      "status": "todo",
+      "dependencies": ["FEAT-001"],
+      "priority": "medium",
+      "details": "Basé sur la section 3.1 (FEAT-014) et 3.2 (FEAT-014) du project_prd.md. Doit être pédagogique et rassurant.",
+      "testStrategy": "Tester le flux de l'assistant pour les nouvelles fonctionnalités implémentées.",
+      "subtasks": []
+    },
+    {
+      "id": "FEAT-015",
+      "title": "Gestion du Profil Utilisateur",
+      "description": "Permettre à l'utilisateur de renseigner des informations sur lui-même, son activité, ses préférences et ses objectifs LinkedIn pour personnaliser les suggestions de l'IA.",
+      "status": "todo",
+      "dependencies": ["FEAT-001"],
+      "priority": "high",
+      "details": "Basé sur la section 3.1 (FEAT-015) et 3.2 (FEAT-015) du project_prd.md. Doit être personnalisé et pertinent.",
+      "testStrategy": "Vérifier l'enregistrement et l'utilisation des informations utilisateur pour la personnalisation.",
+      "subtasks": []
+    }
+  ]
+}
