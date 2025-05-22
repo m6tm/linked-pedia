@@ -11,12 +11,12 @@
 
 ### Objective
 
-Permettre aux utilisateurs (spécifiquement les ghostwriters) de lier et de gérer jusqu'à 3 profils LinkedIn distincts sous leur compte Link-Pedia principal. L'objectif est de fournir une solution centralisée et efficace pour les professionnels gérant le contenu LinkedIn pour plusieurs clients.
+Permettre aux utilisateurs (spécifiquement les ghostwriters) de lier et de gérer jusqu'à 3 profils LinkedIn distincts sous leur compte Linked-Pedia principal. L'objectif est de fournir une solution centralisée et efficace pour les professionnels gérant le contenu LinkedIn pour plusieurs clients.
 
 ### User Stories
 
 - As a ghostwriter, I want to manage multiple LinkedIn profiles so that I can handle content for my clients efficiently. (Should Have)
-- As a ghostwriter, I want to link a client's LinkedIn account to my Link-Pedia account. (Should Have)
+- As a ghostwriter, I want to link a client's LinkedIn account to my Linked-Pedia account. (Should Have)
 - As a ghostwriter, I want to switch between managing different client accounts easily. (Should Have)
 - As a ghostwriter, I want to see content and analytics specific to the client account I am currently managing. (Should Have)
 - As a ghostwriter, I want to unlink a client's account. (Should Have)
@@ -186,7 +186,7 @@ Permettre aux utilisateurs (spécifiquement les ghostwriters) de lier et de gér
 
 ### User Acceptance Tests
 
-- Je suis connecté à Link-Pedia.
+- Je suis connecté à Linked-Pedia.
 - Je navigue vers la section "Gestion des Sous-Comptes".
 - Je clique sur "Ajouter un sous-compte".
 - Je lie un nouveau compte LinkedIn via le flux d'autorisation.
@@ -202,7 +202,7 @@ Permettre aux utilisateurs (spécifiquement les ghostwriters) de lier et de gér
 Feature: Gestion des Sous-Comptes
 
   Scenario: Ajout réussi d'un sous-compte
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And j'ai moins de 3 sous-comptes liés
     When je navigue vers la section "Gestion des Sous-Comptes"
     And je clique sur le bouton "Ajouter un sous-compte"
@@ -211,7 +211,7 @@ Feature: Gestion des Sous-Comptes
     And le sous-compte apparaît dans ma liste de sous-comptes
 
   Scenario: Limite de sous-comptes appliquée
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And j'ai déjà 3 sous-comptes liés
     When je navigue vers la section "Gestion des Sous-Comptes"
     And je tente d'ajouter un nouveau sous-compte
@@ -219,14 +219,14 @@ Feature: Gestion des Sous-Comptes
     And affiche un message indiquant que la limite de 3 sous-comptes est atteinte
 
   Scenario: Sélection d'un sous-compte actif
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And j'ai plusieurs comptes LinkedIn liés (principal et sous-comptes)
     When j'utilise le sélecteur de compte actif pour choisir un sous-compte
     Then le sous-compte sélectionné devient le compte actif
     And toutes les données affichées (posts, audit, statistiques) correspondent à ce sous-compte
 
   Scenario: Déconnexion d'un sous-compte
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And j'ai un sous-compte lié
     When je navigue vers la section "Gestion des Sous-Comptes"
     And je clique sur l'option de déconnexion pour ce sous-compte

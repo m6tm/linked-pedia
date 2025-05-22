@@ -11,22 +11,22 @@
 
 ### Objective
 
-Permettre aux utilisateurs de connecter leur profil LinkedIn à leur compte Link-Pedia via le flux d'autorisation OAuth 2.0 de LinkedIn. Cette liaison est essentielle pour permettre à Link-Pedia d'accéder aux données de profil nécessaires à l'audit, de récupérer les statistiques de posts et de publier/programmer du contenu au nom de l'utilisateur.
+Permettre aux utilisateurs de connecter leur profil LinkedIn à leur compte Linked-Pedia via le flux d'autorisation OAuth 2.0 de LinkedIn. Cette liaison est essentielle pour permettre à Linked-Pedia d'accéder aux données de profil nécessaires à l'audit, de récupérer les statistiques de posts et de publier/programmer du contenu au nom de l'utilisateur.
 
 ### User Stories
 
-- As a user, I want to connect my LinkedIn profile so that Link-Pedia can access my data and publish on my behalf. (Must Have)
+- As a user, I want to connect my LinkedIn profile so that Linked-Pedia can access my data and publish on my behalf. (Must Have)
 - As a user, I want to know if my LinkedIn account is successfully linked so that I can use the features that require it. (Must Have)
-- As a user, I want to be able to disconnect my LinkedIn account from Link-Pedia. (Should Have)
+- As a user, I want to be able to disconnect my LinkedIn account from Linked-Pedia. (Should Have)
 
 ### Success Criteria
 
-- L'utilisateur peut initier le processus de liaison de compte LinkedIn depuis l'application Link-Pedia.
+- L'utilisateur peut initier le processus de liaison de compte LinkedIn depuis l'application Linked-Pedia.
 - L'utilisateur est redirigé vers la page d'autorisation de LinkedIn.
-- Après avoir autorisé l'accès sur LinkedIn, l'utilisateur est redirigé vers Link-Pedia.
-- Link-Pedia reçoit et traite correctement le code d'autorisation de LinkedIn pour obtenir les tokens d'accès et de rafraîchissement.
+- Après avoir autorisé l'accès sur LinkedIn, l'utilisateur est redirigé vers Linked-Pedia.
+- Linked-Pedia reçoit et traite correctement le code d'autorisation de LinkedIn pour obtenir les tokens d'accès et de rafraîchissement.
 - Les tokens sont stockés de manière sécurisée dans la base de données.
-- Le statut de liaison du compte LinkedIn de l'utilisateur est mis à jour dans Link-Pedia.
+- Le statut de liaison du compte LinkedIn de l'utilisateur est mis à jour dans Linked-Pedia.
 - L'application affiche un message de succès ou d'échec de la liaison.
 - L'utilisateur peut voir le statut de son compte LinkedIn lié dans l'application.
 - L'utilisateur peut déconnecter son compte LinkedIn depuis l'application, révoquant l'accès.
@@ -45,7 +45,7 @@ Permettre aux utilisateurs de connecter leur profil LinkedIn à leur compte Link
 2.  Gérer la redirection de callback de LinkedIn (`redirect_uri`).
 3.  Extraire le code d'autorisation des paramètres de l'URL de callback.
 4.  Envoyer une requête POST à l'endpoint de token de LinkedIn pour échanger le code d'autorisation contre des tokens d'accès et de rafraîchissement.
-5.  Stocker de manière sécurisée les tokens d'accès et de rafraîchissement LinkedIn dans la base de données, associés à l'utilisateur Link-Pedia.
+5.  Stocker de manière sécurisée les tokens d'accès et de rafraîchissement LinkedIn dans la base de données, associés à l'utilisateur Linked-Pedia.
 6.  Mettre à jour le statut de liaison du compte LinkedIn pour l'utilisateur dans la base de données.
 7.  Afficher un message de succès ou d'échec de la liaison à l'utilisateur.
 8.  Permettre à l'utilisateur de visualiser le statut de liaison de son compte LinkedIn.
@@ -55,8 +55,8 @@ Permettre aux utilisateurs de connecter leur profil LinkedIn à leur compte Link
 
 1.  L'utilisateur clique sur un bouton "Lier mon compte LinkedIn".
 2.  L'application redirige l'utilisateur vers LinkedIn.
-3.  L'utilisateur autorise Link-Pedia sur le site de LinkedIn.
-4.  LinkedIn redirige l'utilisateur vers l'URI de callback configurée dans Link-Pedia.
+3.  L'utilisateur autorise Linked-Pedia sur le site de LinkedIn.
+4.  LinkedIn redirige l'utilisateur vers l'URI de callback configurée dans Linked-Pedia.
 5.  L'application traite la réponse et affiche un message de succès/échec.
 6.  L'utilisateur navigue vers une section (ex: Paramètres, Profil) pour voir le statut de liaison.
 7.  L'utilisateur clique sur un bouton "Déconnecter mon compte LinkedIn".
@@ -65,7 +65,7 @@ Permettre aux utilisateurs de connecter leur profil LinkedIn à leur compte Link
 
 ### Business Rules
 
-1.  Un utilisateur Link-Pedia ne peut lier qu'un seul profil LinkedIn principal (bien que les sous-comptes permettent de lier d'autres profils, le mécanisme initial de liaison est pour le compte principal).
+1.  Un utilisateur Linked-Pedia ne peut lier qu'un seul profil LinkedIn principal (bien que les sous-comptes permettent de lier d'autres profils, le mécanisme initial de liaison est pour le compte principal).
 2.  Les scopes demandés lors de l'autorisation doivent correspondre aux besoins des fonctionnalités implémentées (publication, lecture profil, statistiques).
 3.  Les tokens d'accès et de rafraîchissement doivent être traités comme des données sensibles.
 
@@ -185,7 +185,7 @@ Aucun.
 ### User Acceptance Tests
 
 - Je peux cliquer sur "Lier mon compte LinkedIn" et être redirigé vers LinkedIn.
-- Je peux autoriser Link-Pedia sur LinkedIn et être redirigé vers l'application.
+- Je peux autoriser Linked-Pedia sur LinkedIn et être redirigé vers l'application.
 - L'application m'indique que mon compte LinkedIn est lié avec succès.
 - Je peux voir le statut "Compte LinkedIn lié" dans mon profil/paramètres.
 - Je peux cliquer sur "Déconnecter mon compte LinkedIn" et confirmer.
@@ -197,31 +197,31 @@ Aucun.
 Feature: Liaison Compte LinkedIn
 
   Scenario: Liaison réussie d'un compte LinkedIn
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And mon compte LinkedIn n'est pas lié
     When je clique sur le bouton "Lier mon compte LinkedIn"
     Then je suis redirigé vers la page d'autorisation de LinkedIn
-    And après avoir autorisé l'accès sur LinkedIn, je suis redirigé vers Link-Pedia
+    And après avoir autorisé l'accès sur LinkedIn, je suis redirigé vers Linked-Pedia
     And mon compte LinkedIn est lié avec succès
     And l'application affiche un message de succès
     And le statut de liaison de mon compte est mis à jour dans l'interface
 
   Scenario: Échec de la liaison d'un compte LinkedIn (autorisation refusée)
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And mon compte LinkedIn n'est pas lié
     When je clique sur le bouton "Lier mon compte LinkedIn"
     And je suis redirigé vers la page d'autorisation de LinkedIn
     And je refuse l'autorisation sur LinkedIn
-    And je suis redirigé vers Link-Pedia
+    And je suis redirigé vers Linked-Pedia
     Then mon compte LinkedIn n'est pas lié
     And l'application affiche un message d'échec
 
   Scenario: Déconnexion d'un compte LinkedIn
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And mon compte LinkedIn est lié
     When je clique sur le bouton "Déconnecter mon compte LinkedIn"
     And je confirme la déconnexion (si nécessaire)
-    Then mon compte LinkedIn est déconnecté de Link-Pedia
+    Then mon compte LinkedIn est déconnecté de Linked-Pedia
     And l'application affiche un message de succès
     And le statut de liaison de mon compte est mis à jour dans l'interface
 ```

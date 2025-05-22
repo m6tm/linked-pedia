@@ -11,7 +11,7 @@
 
 ### Objective
 
-Fournir une interface centralisée où l'utilisateur peut visualiser et gérer tous ses posts créés dans Link-Pedia, qu'ils soient en brouillon, programmés ou déjà publiés. L'objectif est d'offrir une vue d'ensemble claire et un contrôle facile sur son calendrier de publication LinkedIn.
+Fournir une interface centralisée où l'utilisateur peut visualiser et gérer tous ses posts créés dans Linked-Pedia, qu'ils soient en brouillon, programmés ou déjà publiés. L'objectif est d'offrir une vue d'ensemble claire et un contrôle facile sur son calendrier de publication LinkedIn.
 
 ### User Stories
 
@@ -23,7 +23,7 @@ Fournir une interface centralisée où l'utilisateur peut visualiser et gérer t
 ### Success Criteria
 
 - L'utilisateur peut accéder au tableau de bord des posts.
-- Le tableau de bord affiche une liste de tous les posts de l'utilisateur stockés dans Link-Pedia.
+- Le tableau de bord affiche une liste de tous les posts de l'utilisateur stockés dans Linked-Pedia.
 - La liste inclut les posts en statut 'brouillon', 'programmé' et 'publié'.
 - Pour chaque post, des informations clés sont affichées (ex: début du contenu, statut, date de création/programmation/publication).
 - L'utilisateur peut filtrer la liste par statut.
@@ -66,7 +66,7 @@ Fournir une interface centralisée où l'utilisateur peut visualiser et gérer t
 ### Business Rules
 
 1.  Seuls les posts associés à l'utilisateur connecté (ou à ses sous-comptes gérés) doivent être affichés.
-2.  La suppression n'est autorisée que pour les posts en statut 'brouillon' ou 'programmé'. Les posts 'publiés' ne peuvent pas être supprimés depuis Link-Pedia (car ils existent sur LinkedIn et la suppression via API peut être limitée ou non souhaitée).
+2.  La suppression n'est autorisée que pour les posts en statut 'brouillon' ou 'programmé'. Les posts 'publiés' ne peuvent pas être supprimés depuis Linked-Pedia (car ils existent sur LinkedIn et la suppression via API peut être limitée ou non souhaitée).
 3.  Les posts sont triés par défaut par date (la plus récente en premier).
 
 ## Technical Specifications
@@ -182,7 +182,7 @@ Aucun.
 Feature: Tableau de Bord des Posts
 
   Scenario: Affichage de tous les posts de l'utilisateur
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And j'ai des posts en brouillon, programmés et publiés
     When je navigue vers le tableau de bord des posts
     Then l'application affiche une liste de tous mes posts
@@ -254,7 +254,7 @@ Aucune exigence spécifique pour le MVP. Les chaînes de caractères seront cod�
 ## Open Questions
 
 - Faut-il implémenter la pagination pour la liste des posts dans le MVP ? (Dépend du nombre attendu de posts par utilisateur).
-- Comment gérer la synchronisation des posts publiés directement sur LinkedIn (en dehors de Link-Pedia) ? (Hors scope MVP, mais pertinent pour une vue complète).
+- Comment gérer la synchronisation des posts publiés directement sur LinkedIn (en dehors de Linked-Pedia) ? (Hors scope MVP, mais pertinent pour une vue complète).
 - Faut-il permettre l'archivage des posts au lieu de la suppression ? (Hors scope MVP).
 
 ---

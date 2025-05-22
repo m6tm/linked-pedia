@@ -173,7 +173,7 @@ Aucun (la table `public.posts` est utilisée, potentiellement créée par une au
 Feature: Générateur de Posts Texte
 
   Scenario: Génération et sauvegarde réussie d'un brouillon de post texte
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     When je navigue vers la section "Créer un Post" et choisis "Générer Texte"
     And je saisis des mots-clés ou un thème
     And je clique sur le bouton "Générer"
@@ -185,7 +185,7 @@ Feature: Générateur de Posts Texte
     Then le brouillon est sauvegardé dans mon tableau de bord
 
   Scenario: Affichage d'un message d'erreur si la génération échoue
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And le service IA de génération est indisponible ou retourne une erreur
     When je navigue vers la section "Créer un Post" et choisis "Générer Texte"
     And je saisis des mots-clés ou un thème

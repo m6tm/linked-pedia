@@ -11,11 +11,11 @@
 
 ### Objective
 
-Permettre aux nouveaux utilisateurs de créer un compte sécurisé sur Link-Pedia et aux utilisateurs existants de se connecter, afin qu'ils puissent accéder et utiliser toutes les fonctionnalités de l'application pour optimiser leur présence sur LinkedIn.
+Permettre aux nouveaux utilisateurs de créer un compte sécurisé sur Linked-Pedia et aux utilisateurs existants de se connecter, afin qu'ils puissent accéder et utiliser toutes les fonctionnalités de l'application pour optimiser leur présence sur LinkedIn.
 
 ### User Stories
 
-- As a new user, I want to create an account so that I can access Link-Pedia's features. (Must Have)
+- As a new user, I want to create an account so that I can access Linked-Pedia's features. (Must Have)
 - As a returning user, I want to log in securely so that I can continue managing my LinkedIn presence. (Must Have)
 
 ### Success Criteria
@@ -30,7 +30,7 @@ Permettre aux nouveaux utilisateurs de créer un compte sécurisé sur Link-Pedi
 
 - **Main Objective:** La conception et l'expérience utilisateur de cette fonctionnalité doivent activement contribuer à l'objectif global d'une application de qualité "Silicon Valley / Y Combinator". Cela signifie une attention méticuleuse aux détails, la modernité, l'intuitivité et l'esthétique. Le processus d'inscription et de connexion doit être perçu comme simple, rapide et sécurisé.
 - **Reference:** Refer to the general design and UX/UI principles defined in the Design Conventions document ([`02_AI-DOCS/Conventions/design_conventions.md`](02_AI-DOCS/Conventions/design_conventions.md:1)).
-- **Specifics for this feature:** L'interface doit être épurée et professionnelle, en accord avec l'esthétique générale de Link-Pedia (couleurs bleu/blanc, typographie moderne). Les formulaires doivent être clairs et faciles à remplir sur tous les appareils (réactivité). Le feedback visuel (états de chargement, messages d'erreur) doit être immédiat et non ambigu. L'accent doit être mis sur la confiance et la sécurité perçues par l'utilisateur.
+- **Specifics for this feature:** L'interface doit être épurée et professionnelle, en accord avec l'esthétique générale de Linked-Pedia (couleurs bleu/blanc, typographie moderne). Les formulaires doivent être clairs et faciles à remplir sur tous les appareils (réactivité). Le feedback visuel (états de chargement, messages d'erreur) doit être immédiat et non ambigu. L'accent doit être mis sur la confiance et la sécurité perçues par l'utilisateur.
 
 ## Functional Requirements
 
@@ -92,7 +92,7 @@ Aucun.
 #### New Tables/Collections
 
 - **Table:** `public.users`
-  - Purpose: Stocker les informations utilisateur spécifiques à l'application Link-Pedia, liées à l'utilisateur Supabase Auth.
+  - Purpose: Stocker les informations utilisateur spécifiques à l'application Linked-Pedia, liées à l'utilisateur Supabase Auth.
   - Fields:
     - `id`: `uuid` (Clé primaire, liée à `auth.users.id`)
     - `email`: `text` (Indexé, unique, peut être copié depuis auth.users)
@@ -112,7 +112,7 @@ Aucun.
 
 - **Screen:** Page d'Inscription (`/signup`)
   - Description: Page contenant un formulaire pour la création de compte (champs email, mot de passe, confirmation mot de passe, bouton "S'inscrire"). Inclut un lien vers la page de connexion. Doit être épurée et professionnelle.
-  - Wireframe/Mockup (Objectif YC Standard): Disposition simple et centrée. Utilisation de composants `Input` et `Button` stylisés selon le Design System Link-Pedia. Messages d'erreur clairs sous les champs ou en haut du formulaire. Indicateur de chargement sur le bouton lors de la soumission.
+  - Wireframe/Mockup (Objectif YC Standard): Disposition simple et centrée. Utilisation de composants `Input` et `Button` stylisés selon le Design System Linked-Pedia. Messages d'erreur clairs sous les champs ou en haut du formulaire. Indicateur de chargement sur le bouton lors de la soumission.
 - **Screen:** Page de Connexion (`/login`)
   - Description: Page contenant un formulaire pour la connexion (champs email, mot de passe, bouton "Se connecter"). Inclut un lien vers la page d'inscription et potentiellement un lien "Mot de passe oublié" (grisé si hors scope). Disposition similaire à la page d'inscription pour la cohérence.
   - Wireframe/Mockup (Objectif YC Standard): Disposition simple et centrée. Utilisation de composants `Input` et `Button` stylisés selon le Design System. Feedback clair.

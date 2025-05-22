@@ -2,13 +2,13 @@
 
 ## Project Information
 
-- **Project Name:** Link-Pedia
+- **Project Name:** Linked-Pedia
 - **Version:** 1.0
 - **Last Updated:** 22/05/2025
 
 ## Architecture Overview
 
-L'architecture de Link-Pedia est conçue comme une application web moderne et scalable, s'appuyant sur une approche hybride avec un frontend rendu côté client et serveur (Next.js) et un backend serverless (Supabase Edge Functions) pour la logique métier et les interactions externes. L'objectif est de fournir une expérience utilisateur rapide et réactive tout en gérant de manière sécurisée les interactions avec des services tiers comme l'API LinkedIn et les modèles d'IA.
+L'architecture de Linked-Pedia est conçue comme une application web moderne et scalable, s'appuyant sur une approche hybride avec un frontend rendu côté client et serveur (Next.js) et un backend serverless (Supabase Edge Functions) pour la logique métier et les interactions externes. L'objectif est de fournir une expérience utilisateur rapide et réactive tout en gérant de manière sécurisée les interactions avec des services tiers comme l'API LinkedIn et les modèles d'IA.
 
 Les principaux composants incluent le frontend Next.js, la suite backend de Supabase (Base de données PostgreSQL, Authentification, Stockage, Edge Functions) et diverses intégrations avec des services externes et des MCPs.
 
@@ -98,7 +98,7 @@ graph TD
 - **Context:** Besoin d'un système de style rapide et flexible pour implémenter une interface utilisateur épurée et professionnelle, tout en visant une haute qualité de design.
 - **Options Considered:** CSS Modules, Styled Components, d'autres frameworks UI (Material UI, Ant Design).
 - **Decision:** Utiliser Tailwind CSS avec une personnalisation des composants inspirée par Shadcn/ui.
-- **Rationale:** Tailwind permet un prototypage et une implémentation UI rapides grâce à ses classes utilitaires. L'approche Shadcn/ui fournit des composants accessibles et bien conçus qui peuvent être facilement personnalisés pour correspondre au Design System Link-Pedia, assurant cohérence et qualité.
+- **Rationale:** Tailwind permet un prototypage et une implémentation UI rapides grâce à ses classes utilitaires. L'approche Shadcn/ui fournit des composants accessibles et bien conçus qui peuvent être facilement personnalisés pour correspondre au Design System Linked-Pedia, assurant cohérence et qualité.
 - **Consequences:** Courbe d'apprentissage initiale pour Tailwind si non familier. Nécessite une discipline pour maintenir la cohérence via le Design System personnalisé.
 
 ## Communication Patterns

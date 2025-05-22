@@ -1,8 +1,8 @@
-# Coding Conventions and Style Guide - Link-Pedia
+# Coding Conventions and Style Guide - Linked-Pedia
 
 ## Overview
 
-This document outlines the coding conventions and style guidelines for the Link-Pedia project. Following these conventions ensures consistency, readability, and maintainability across the codebase. It should be used in conjunction with the [**Design Conventions and Style Guide**](design_conventions.md:1) which details the UX/UI principles and visual standards.
+This document outlines the coding conventions and style guidelines for the Linked-Pedia project. Following these conventions ensures consistency, readability, and maintainability across the codebase. It should be used in conjunction with the [**Design Conventions and Style Guide**](design_conventions.md:1) which details the UX/UI principles and visual standards.
 
 ## General Principles
 
@@ -310,9 +310,9 @@ The goal is to create user interfaces (UI) and user experiences (UX) that rival 
   - Follow a centralized Tailwind CSS configuration ([`tailwind.config.js`](tailwind.config.js:1) to be created/modified if needed) to define the color palette, typography, breakpoints, etc.
   - Favor composing Tailwind utility classes to create reusable components.
   - Avoid excessive custom CSS styles; rely as much as possible on Tailwind's capabilities.
-  - **Utiliser les tokens définis dans le Link-Pedia Design System (voir [Design Conventions](design_conventions.md:1)) pour toutes les décisions de style.**
+  - **Utiliser les tokens définis dans le Linked-Pedia Design System (voir [Design Conventions](design_conventions.md:1)) pour toutes les décisions de style.**
 - **UI Component Library (Optional but recommended):**
-  - Utiliser Shadcn/UI comme base pour les composants, en les personnalisant entièrement pour correspondre au Design System Link-Pedia.
+  - Utiliser Shadcn/UI comme base pour les composants, en les personnalisant entièrement pour correspondre au Design System Linked-Pedia.
   - Documenter la personnalisation et l'utilisation des composants dans Storybook.
 - **Color Palette:** Utiliser la palette de couleurs définie dans le [**Design Conventions and Style Guide**](design_conventions.md:1) (Bleu, Blanc, Neutres, Accent, Sémantiques).
 - **Typography:** Utiliser la hiérarchie typographique définie dans le [**Design Conventions and Style Guide**](design_conventions.md:1).

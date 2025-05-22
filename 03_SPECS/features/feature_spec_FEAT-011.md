@@ -11,7 +11,7 @@
 
 ### Objective
 
-Afficher les métriques clés (impressions, interactions, taux d'engagement, etc.) pour les posts publiés par l'utilisateur via Link-Pedia. L'objectif est d'aider l'utilisateur à comprendre la performance de son contenu et à identifier ce qui résonne le mieux auprès de son audience.
+Afficher les métriques clés (impressions, interactions, taux d'engagement, etc.) pour les posts publiés par l'utilisateur via Linked-Pedia. L'objectif est d'aider l'utilisateur à comprendre la performance de son contenu et à identifier ce qui résonne le mieux auprès de son audience.
 
 ### User Stories
 
@@ -23,7 +23,7 @@ Afficher les métriques clés (impressions, interactions, taux d'engagement, etc
 ### Success Criteria
 
 - L'utilisateur peut accéder à la section des statistiques de performance pour ses posts publiés.
-- L'application récupère les statistiques de performance pour les posts publiés via Link-Pedia depuis l'API LinkedIn.
+- L'application récupère les statistiques de performance pour les posts publiés via Linked-Pedia depuis l'API LinkedIn.
 - L'application affiche les métriques clés (impressions, likes, commentaires, partages) pour chaque post publié.
 - L'application calcule et affiche le taux d'engagement pour chaque post.
 - Les statistiques sont présentées de manière claire et lisible.
@@ -39,7 +39,7 @@ Afficher les métriques clés (impressions, interactions, taux d'engagement, etc
 
 ### Core Functionality
 
-1.  Récupérer la liste des posts publiés par l'utilisateur via Link-Pedia depuis la base de données (`public.posts`).
+1.  Récupérer la liste des posts publiés par l'utilisateur via Linked-Pedia depuis la base de données (`public.posts`).
 2.  Pour chaque post publié, appeler l'API LinkedIn pour récupérer ses statistiques de performance (impressions, likes, commentaires, partages).
 3.  Stocker les statistiques récupérées dans la base de données (table `post_analytics`).
 4.  Calculer le taux d'engagement pour chaque post.
@@ -58,7 +58,7 @@ Afficher les métriques clés (impressions, interactions, taux d'engagement, etc
 
 ### Business Rules
 
-1.  Les statistiques ne sont disponibles que pour les posts publiés via Link-Pedia.
+1.  Les statistiques ne sont disponibles que pour les posts publiés via Linked-Pedia.
 2.  Les statistiques doivent être récupérées via l'API LinkedIn.
 3.  Les statistiques doivent être mises à jour périodiquement pour refléter les données les plus récentes.
 4.  Le calcul du taux d'engagement doit suivre une formule définie (voir Logique Métier).
@@ -168,7 +168,7 @@ Aucun.
 
 ### User Acceptance Tests
 
-- Je publie un post via Link-Pedia.
+- Je publie un post via Linked-Pedia.
 - Après un certain temps, je navigue vers la section "Statistiques".
 - Je vois mon post publié dans la liste avec ses métriques (impressions, likes, commentaires, partages).
 - Je vois le taux d'engagement calculé pour mon post.
@@ -180,7 +180,7 @@ Aucun.
 Feature: Statistiques de Performance
 
   Scenario: Affichage des statistiques des posts publiés
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And j'ai publié des posts via l'application
     And les statistiques pour ces posts ont été récupérées via l'API LinkedIn
     When je navigue vers la section "Statistiques"
@@ -189,7 +189,7 @@ Feature: Statistiques de Performance
     And le taux d'engagement est calculé et affiché pour chaque post
 
   Scenario: Synchronisation périodique des statistiques
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And j'ai des posts publiés
     And de nouvelles interactions ont eu lieu sur ces posts sur LinkedIn
     When le mécanisme de synchronisation des statistiques s'exécute
@@ -197,7 +197,7 @@ Feature: Statistiques de Performance
     And les statistiques affichées dans l'interface sont mises à jour
 
   Scenario: Affichage d'un indicateur si les statistiques ne sont pas disponibles
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And j'ai publié un post très récemment
     When je navigue vers la section "Statistiques"
     Then l'application affiche mon post

@@ -167,9 +167,9 @@ flowchart TD
 ## Known Edge Cases and Special Scenarios
 
 - **Scénario 1: Token LinkedIn expiré ou invalide :** Si un appel API échoue en raison d'un token invalide, le système doit tenter de le rafraîchir. Si le rafraîchissement échoue, l'utilisateur doit être invité à reconnecter son compte LinkedIn.
-- **Scénario 2: Échec de publication/programmation sur LinkedIn :** Si l'API LinkedIn retourne une erreur lors de la publication ou de la programmation, le statut du post dans Link-Pedia doit être mis à jour en 'échec' et l'utilisateur doit être notifié avec le message d'erreur si possible.
+- **Scénario 2: Échec de publication/programmation sur LinkedIn :** Si l'API LinkedIn retourne une erreur lors de la publication ou de la programmation, le statut du post dans Linked-Pedia doit être mis à jour en 'échec' et l'utilisateur doit être notifié avec le message d'erreur si possible.
 - **Scénario 3: Fichier soumis non supporté pour la génération de post :** Si l'utilisateur télécharge un type de fichier que l'IA ne peut pas traiter, l'application doit afficher un message d'erreur clair indiquant les formats supportés.
-- **Scénario 4: Utilisateur déconnecte son compte LinkedIn :** Si l'utilisateur révoque l'accès de Link-Pedia depuis LinkedIn, l'application doit détecter cela (via des erreurs API) et mettre à jour le statut de liaison du compte dans Link-Pedia, informant l'utilisateur que les fonctionnalités nécessitant l'accès ne sont plus disponibles.
+- **Scénario 4: Utilisateur déconnecte son compte LinkedIn :** Si l'utilisateur révoque l'accès de Linked-Pedia depuis LinkedIn, l'application doit détecter cela (via des erreurs API) et mettre à jour le statut de liaison du compte dans Linked-Pedia, informant l'utilisateur que les fonctionnalités nécessitant l'accès ne sont plus disponibles.
 
 ## Implementation Considerations
 

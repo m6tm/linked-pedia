@@ -1,6 +1,6 @@
-# Index des Fichiers du Projet Link-Pedia
+# Index des Fichiers du Projet Linked-Pedia
 
-Ce document liste tous les fichiers et répertoires du projet Link-Pedia pour vous aider à naviguer dans la structure du projet.
+Ce document liste tous les fichiers et répertoires du projet Linked-Pedia pour vous aider à naviguer dans la structure du projet.
 
 ## Fichiers à la Racine
 

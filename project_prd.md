@@ -1,6 +1,6 @@
-# Product Requirements Document (PRD) - Link-Pedia
+# Product Requirements Document (PRD) - Linked-Pedia
 
-**Project Name:** Link-Pedia
+**Project Name:** Linked-Pedia
 **Version:** 1.0
 **Last Updated:** 22/05/2025
 **Author(s):** Utilisateur (Initial Idea) & AI Coding Agent (Elaboration)
@@ -118,12 +118,12 @@ _AI Agent Directive: Your first task is to read and analyze this entire PRD to u
 ### 1.1. Document Purpose
 
 _Comment: This document serves as the primary input for the AI Coding Agent, which will elaborate on technical specifications based on the user's high-level input. It outlines the project idea, desired features, and establishes the framework for the AI to propose detailed solutions within the "Agentic Coding System"._
-Ce document sert de spécification complète pour le développement de l'application web Link-Pedia. Il détaille la vision du produit, les objectifs commerciaux, les exigences fonctionnelles et non fonctionnelles, l'architecture proposée et les plans de test et de déploiement. Il est destiné à guider l'équipe de développement, y compris l'Agent de Codage IA, tout au long du cycle de vie du projet.
+Ce document sert de spécification complète pour le développement de l'application web Linked-Pedia. Il détaille la vision du produit, les objectifs commerciaux, les exigences fonctionnelles et non fonctionnelles, l'architecture proposée et les plans de test et de déploiement. Il est destiné à guider l'équipe de développement, y compris l'Agent de Codage IA, tout au long du cycle de vie du projet.
 
 ### 1.2. Project Idea & Core Problem (User Input)
 
 _User Instruction: Please provide the core idea of your project and the main problem it aims to solve. Be as clear and concise as possible. The AI Agent can elaborate further if market research data is available or if it's instructed to perform high-level research._
-**Idée du projet :** Développer une application web Next.js 15 nommée Link-Pedia pour aider les professionnels à optimiser leur présence sur LinkedIn grâce à la génération, l'édition, l'organisation et l'analyse de posts, ainsi que l'audit de profil.
+**Idée du projet :** Développer une application web Next.js 15 nommée Linked-Pedia pour aider les professionnels à optimiser leur présence sur LinkedIn grâce à la génération, l'édition, l'organisation et l'analyse de posts, ainsi que l'audit de profil.
 **Problème principal :** Les professionnels ont du mal à créer du contenu LinkedIn pertinent et engageant de manière efficace, à organiser leur activité de publication et à comprendre comment optimiser leur profil pour atteindre leurs objectifs.
 
 ### 1.3. Product Vision (AI to Propose, User to Validate)
@@ -140,7 +140,7 @@ _AI Instruction: Based on the `Project Idea & Core Problem`, propose 2-3 SMART (
 
 1.  Acquérir 1000 utilisateurs actifs mensuels (MAU) dans les 6 mois suivant le lancement initial.
 2.  Atteindre un taux de conversion de 5% des utilisateurs freemium vers un abonnement payant dans les 6 mois.
-3.  Démontrer une augmentation moyenne de 15% du taux d'engagement sur les posts publiés via Link-Pedia pour les utilisateurs actifs dans les 3 mois.
+3.  Démontrer une augmentation moyenne de 15% du taux d'engagement sur les posts publiés via Linked-Pedia pour les utilisateurs actifs dans les 3 mois.
 
 ### 1.5. Key Performance Indicators (KPIs) (AI to Propose, User to Validate)
 
@@ -155,7 +155,7 @@ _AI Instruction: For each proposed Business Goal, suggest 1-2 relevant KPIs._
   - Taux de conversion Freemium -> Payant.
   - Revenu Mensuel Récurrent (RMR).
 - **Pour l'objectif 3 (Augmentation de l'engagement) :**
-  - Taux d'engagement moyen par post publié via Link-Pedia.
+  - Taux d'engagement moyen par post publié via Linked-Pedia.
   - Évolution du Social Selling Index (SSI) moyen des utilisateurs actifs de la fonctionnalité d'audit.
 
 ### 1.6. Project Scope (AI to Propose based on Features, User to Validate)
@@ -221,11 +221,11 @@ _Comment: This system emphasizes technical excellence, design finesse, close Des
 
 - **Core Tenets:**
   _ **Technical Excellence:** Clean, well-tested, performant, and maintainable code.
-  _ **Design Finesse:** Meticulous attention to detail, resulting in a polished and intuitive user experience. Adherence to the Link-Pedia Design System is paramount.
+  _ **Design Finesse:** Meticulous attention to detail, resulting in a polished and intuitive user experience. Adherence to the Linked-Pedia Design System is paramount.
   _ **Collaboration:** Seamless integration between user requirements and AI execution, facilitated by this PRD and AI's clarification process.
   _ **Documentation:** AI-assisted generation of comprehensive documentation for code, design system components, and APIs.
-  * **Iteration:** AI facilitates rapid development cycles based on feedback and continuous improvement.
-  *AI to ensure its processes align with these tenets\*
+  - **Iteration:** AI facilitates rapid development cycles based on feedback and continuous improvement.
+    \*AI to ensure its processes align with these tenets\*
 
 ### 1.10. Default Technology Stack & AI Initiative in Tooling
 
@@ -278,7 +278,7 @@ _User Instruction: If you have market research, please summarize key findings or
 ### 2.2. Problem(s) to Solve (Elaborated by AI from User Input)
 
 _AI Instruction: Based on the user's `Project Idea & Core Problem` (Section 1.2) and any market research (Section 2.1), elaborate on the specific problems this product will solve._
-Le projet Link-Pedia vise à résoudre plusieurs problèmes clés rencontrés par les professionnels sur LinkedIn :
+Le projet Linked-Pedia vise à résoudre plusieurs problèmes clés rencontrés par les professionnels sur LinkedIn :
 
 - **Manque d'efficacité dans la création de contenu :** Il est chronophage de trouver des idées, de rédiger des brouillons et d'optimiser les posts pour maximiser leur impact.
 - **Difficulté à produire du contenu engageant :** Les utilisateurs ne savent pas toujours comment structurer leurs posts, quelles accroches utiliser ou quels sujets résonnent le mieux auprès de leur audience.
@@ -302,12 +302,12 @@ _AI Instruction: Based on the Target Audience, generate 1-2 draft user personas.
   - Description: Sarah est une consultante indépendante de 35 ans qui utilise LinkedIn comme principal canal d'acquisition client et de networking. Elle est à l'aise avec les outils numériques mais manque de temps pour la création de contenu.
   - Objectifs: Augmenter sa visibilité, attirer de nouveaux clients, se positionner comme leader d'opinion dans son domaine.
   - Frustrations: Difficulté à trouver des idées de posts régulières, ne sait pas comment optimiser ses publications pour l'algorithme LinkedIn, passe trop de temps à rédiger des brouillons.
-  - Scénario d'utilisation: Sarah utilise Link-Pedia pour générer rapidement des idées de posts basées sur les tendances de son secteur, rédige un brouillon, utilise l'optimiseur pour obtenir des suggestions d'amélioration, programme le post via le tableau de bord et consulte ensuite les statistiques pour voir sa performance.
+  - Scénario d'utilisation: Sarah utilise Linked-Pedia pour générer rapidement des idées de posts basées sur les tendances de son secteur, rédige un brouillon, utilise l'optimiseur pour obtenir des suggestions d'amélioration, programme le post via le tableau de bord et consulte ensuite les statistiques pour voir sa performance.
 - **Persona 2: David Chen, Ghostwriter LinkedIn**
   - Description: David est un ghostwriter de 40 ans qui gère les profils LinkedIn de plusieurs dirigeants d'entreprise. Il a besoin d'un outil pour centraliser la gestion de contenu pour ses différents clients.
   - Objectifs: Gérer efficacement plusieurs comptes clients, produire du contenu de haute qualité adapté à chaque client, démontrer un ROI clair à ses clients via des statistiques.
   - Frustrations: Passer d'un compte à l'autre est fastidieux, adapter le ton et le style pour chaque client prend du temps, suivre les performances de chaque profil est complexe.
-  - Scénario d'utilisation: David utilise la fonctionnalité de sous-comptes de Link-Pedia pour basculer facilement entre les profils de ses clients. Il utilise les outils de génération et d'optimisation pour créer des posts pour chaque client, en s'assurant que les suggestions IA sont alignées avec leur activité et leurs objectifs. Il utilise le tableau de bord pour programmer les posts et l'interface de statistiques pour suivre la performance de chaque client.
+  - Scénario d'utilisation: David utilise la fonctionnalité de sous-comptes de Linked-Pedia pour basculer facilement entre les profils de ses clients. Il utilise les outils de génération et d'optimisation pour créer des posts pour chaque client, en s'assurant que les suggestions IA sont alignées avec leur activité et leurs objectifs. Il utilise le tableau de bord pour programmer les posts et l'interface de statistiques pour suivre la performance de chaque client.
 
 ### 2.5. Competitive Analysis (Optional User Input / AI Research Task)
 
@@ -317,13 +317,13 @@ Les principaux concurrents se situent dans deux catégories :
 
 - **Outils généralistes de gestion de réseaux sociaux :** Hootsuite, Buffer, Later. Ils offrent une planification multi-plateforme mais sont moins spécialisés sur les spécificités de LinkedIn et leurs fonctionnalités IA sont souvent basiques.
 - **Générateurs de texte IA :** Jasper, Copy.ai, Writesonic. Excellents pour la génération de texte, mais ne sont pas intégrés à LinkedIn pour la publication, la planification ou l'analyse de performance spécifique à la plateforme.
-  Link-Pedia se différencie par son focus exclusif sur LinkedIn, son intégration profonde et sa suite d'outils IA avancés couvrant l'ensemble du cycle de vie du contenu LinkedIn, y compris l'audit de profil.
+  Linked-Pedia se différencie par son focus exclusif sur LinkedIn, son intégration profonde et sa suite d'outils IA avancés couvrant l'ensemble du cycle de vie du contenu LinkedIn, y compris l'audit de profil.
 
 ### 2.6. Unique Value Proposition (UVP) (AI to Propose, User to Validate)
 
 _AI Instruction: Based on the problem, target audience, and competitive landscape, propose a clear UVP for this product._
 **Proposition de Valeur Unique (UVP) :**
-Link-Pedia : Votre copilote IA tout-en-un pour maîtriser votre présence et maximiser votre impact sur LinkedIn, en transformant la création de contenu fastidieuse en un processus intelligent, efficace et basé sur les données, vous permettant de gagner en visibilité et en influence sans effort.
+Linked-Pedia : Votre copilote IA tout-en-un pour maîtriser votre présence et maximiser votre impact sur LinkedIn, en transformant la création de contenu fastidieuse en un processus intelligent, efficace et basé sur les données, vous permettant de gagner en visibilité et en influence sans effort.
 
 ---
 
@@ -342,7 +342,7 @@ _User Instruction: Please list the core features you envision for your project. 
 2.  **Feature Name:** Liaison Compte LinkedIn
     - **User-Provided Objective/Description:** Permettre à l'utilisateur de connecter son profil LinkedIn à l'application via l'API officielle.
     - **Desired Vibe/Key Experience (Optional):** Fiable, transparent.
-    - **Key User Outcomes:** Autoriser Link-Pedia à accéder aux données nécessaires et à publier en son nom.
+    - **Key User Outcomes:** Autoriser Linked-Pedia à accéder aux données nécessaires et à publier en son nom.
 3.  **Feature Name:** Audit de Profil LinkedIn
     - **User-Provided Objective/Description:** Analyser le profil LinkedIn de l'utilisateur (en tenant compte du SSI) et fournir un rapport détaillé avec des recommandations d'optimisation personnalisées.
     - **Desired Vibe/Key Experience (Optional):** Insightful, actionable.
@@ -384,7 +384,7 @@ _User Instruction: Please list the core features you envision for your project. 
     - **Desired Vibe/Key Experience (Optional):** Intelligent, actionable.
     - **Key User Outcomes:** Savoir comment optimiser ses futurs posts et sa stratégie globale.
 13. **Feature Name:** Gestion des Sous-Comptes
-    - **User-Provided Objective/Description:** Permettre aux utilisateurs (ghostwriters) de lier et de gérer jusqu'à 3 profils LinkedIn distincts sous un même compte Link-Pedia.
+    - **User-Provided Objective/Description:** Permettre aux utilisateurs (ghostwriters) de lier et de gérer jusqu'à 3 profils LinkedIn distincts sous un même compte Linked-Pedia.
     - **Desired Vibe/Key Experience (Optional):** Flexible, efficace.
     - **Key User Outcomes:** Gérer facilement le contenu pour plusieurs clients ou profils.
 14. **Feature Name:** Mode Assistant
@@ -404,10 +404,10 @@ _AI Instruction: For each feature listed in 3.1, generate 1-3 core user stories 
 _AI to Generate User Stories for User Validation_
 
 - **FEAT-001: Inscription et Connexion**
-  - As a new user, I want to create an account so that I can access Link-Pedia's features. (Must Have)
+  - As a new user, I want to create an account so that I can access Linked-Pedia's features. (Must Have)
   - As a returning user, I want to log in securely so that I can continue managing my LinkedIn presence. (Must Have)
 - **FEAT-002: Liaison Compte LinkedIn**
-  - As a user, I want to connect my LinkedIn profile so that Link-Pedia can access my data and publish on my behalf. (Must Have)
+  - As a user, I want to connect my LinkedIn profile so that Linked-Pedia can access my data and publish on my behalf. (Must Have)
 - **FEAT-003: Audit de Profil LinkedIn**
   - As a user, I want to get an audit of my LinkedIn profile so that I understand how to optimize it. (Must Have)
   - As a user, I want to see personalized recommendations based on my SSI so that I can improve my profile's effectiveness. (Must Have)
@@ -442,7 +442,7 @@ _AI Instruction: If any feature from 3.1 implies complex interactions or multipl
 _AI to Generate Use Cases for User Validation, if applicable_
 **Cas d'Utilisation : Génération et Publication d'un Post**
 
-1.  L'utilisateur se connecte à Link-Pedia.
+1.  L'utilisateur se connecte à Linked-Pedia.
 2.  L'utilisateur navigue vers la section "Créer un Post".
 3.  L'utilisateur choisit une méthode de génération (texte, fichier, idée).
 4.  Si "texte" ou "idée", l'utilisateur fournit des mots-clés ou un thème. Si "fichier", l'utilisateur télécharge ou colle un lien.
@@ -455,10 +455,10 @@ _AI to Generate Use Cases for User Validation, if applicable_
 
 **Cas d'Utilisation : Audit de Profil et Application des Recommandations**
 
-1.  L'utilisateur se connecte à Link-Pedia.
+1.  L'utilisateur se connecte à Linked-Pedia.
 2.  L'utilisateur s'assure que son compte LinkedIn est lié.
 3.  L'utilisateur navigue vers la section "Audit de Profil".
-4.  Link-Pedia analyse le profil LinkedIn de l'utilisateur et son SSI.
+4.  Linked-Pedia analyse le profil LinkedIn de l'utilisateur et son SSI.
 5.  L'application présente un rapport d'audit avec des scores et des recommandations personnalisées (ex: "Votre section 'À propos' pourrait être améliorée en ajoutant des mots-clés pertinents", "Interagissez plus avec les publications de votre réseau").
 6.  L'utilisateur examine les recommandations.
 7.  L'utilisateur peut décider d'appliquer certaines recommandations manuellement sur son profil LinkedIn.
@@ -498,14 +498,14 @@ graph TD
 
 ```mermaid
 graph TD
-    A[Début: Nouvel Utilisateur] --> B[Créer Compte Link-Pedia];
+    A[Début: Nouvel Utilisateur] --> B[Créer Compte Linked-Pedia];
     B --> C[Se Connecter];
     C --> D[Page d'Accueil/Assistant];
     D --> E{Compte LinkedIn lié?};
     E -- Non --> F[Inviter à Lier Compte LinkedIn];
     F --> G[Redirection vers Autorisation LinkedIn];
     G --> H{Autorisation accordée?};
-    H -- Oui --> I[Retour à Link-Pedia];
+    H -- Oui --> I[Retour à Linked-Pedia];
     H -- Non --> J[Afficher Message d'Erreur/Réessayer];
     I --> K[Liaison Réussie];
     K --> L[Proposer Audit de Profil];
@@ -530,8 +530,8 @@ _AI to Propose API Design for User Validation, if applicable_
   - `POST /auth/login` : Connexion utilisateur.
   - `POST /auth/linkedin/connect` : Initier le processus de liaison LinkedIn (OAuth 2.0).
   - `GET /auth/linkedin/callback` : Gérer le callback OAuth de LinkedIn.
-  - `GET /user/profile` : Obtenir les informations du profil utilisateur Link-Pedia.
-  - `PUT /user/profile` : Mettre à jour les informations du profil utilisateur Link-Pedia.
+  - `GET /user/profile` : Obtenir les informations du profil utilisateur Linked-Pedia.
+  - `PUT /user/profile` : Mettre à jour les informations du profil utilisateur Linked-Pedia.
   - `POST /user/subaccount` : Créer un sous-compte (pour ghostwriters).
   - `GET /user/subaccounts` : Lister les sous-comptes.
   - `PUT /user/subaccount/{id}` : Mettre à jour un sous-compte.
@@ -544,7 +544,7 @@ _AI to Propose API Design for User Validation, if applicable_
   - `POST /posts/ideas` : Générer des idées de posts.
   - `POST /posts/optimize` : Optimiser un post existant (retourne plusieurs suggestions).
   - `POST /posts/hooks` : Générer des accroches pour un post.
-  - `POST /posts` : Créer un brouillon de post dans Link-Pedia.
+  - `POST /posts` : Créer un brouillon de post dans Linked-Pedia.
   - `GET /posts` : Lister les posts de l'utilisateur (brouillons, programmés, publiés).
   - `GET /posts/{id}` : Obtenir les détails d'un post spécifique.
   - `PUT /posts/{id}` : Mettre à jour un post (brouillon).
@@ -674,7 +674,7 @@ _User Instruction: The goal is an **exceptionally high-quality design and UX/UI,
 
 _AI Instruction: Based on user input (and the YC-standard goal), or by initializing with the default style described, establish the Key Design Principles for THIS project. These principles must explicitly aim for UX/UI excellence and guide all your proposals._
 _AI to Propose Specific Key Design Principles for User Validation, emphasizing the "Y Combinator standard" goal_
-**Principes Clés de Conception (Link-Pedia Design Principles) :**
+**Principes Clés de Conception (Linked-Pedia Design Principles) :**
 
 1.  **Clarté et Minimalisme :** L'interface doit être épurée, avec un minimum d'éléments distrayants, pour permettre à l'utilisateur de se concentrer sur la création et la gestion de contenu. Utiliser l'espace blanc généreusement.
 2.  **Intuitivité :** Les parcours utilisateurs doivent être logiques et faciles à suivre, même pour les débutants ("Mode Assistant"). Les actions principales doivent être clairement identifiées.
@@ -687,7 +687,7 @@ _AI to Propose Specific Key Design Principles for User Validation, emphasizing t
 
 _AI Instruction: Based on user's aesthetic preferences (Section 5.1) and the default stack (Tailwind CSS, Shadcn/ui inspiration), propose the initial `[AI to Propose Project Name] Design System` tokens (primary/secondary colors, typography scale, core spacing units) for `tailwind.config.js`. Detail how Shadcn/ui components will be customized to fit this system. All visual design proposals are subject to human review._
 
-- **Proposed Design System Name:** Link-Pedia Design System
+- **Proposed Design System Name:** Linked-Pedia Design System
 - **Proposed Core Design Tokens (for `tailwind.config.js`):**
   - **Colors:**
     - `primary`: Un bleu professionnel (ex: `#0077B5` - le bleu LinkedIn ou une teinte proche).
@@ -701,7 +701,7 @@ _AI Instruction: Based on user's aesthetic preferences (Section 5.1) and the def
   - **Spacing:**
     - `base-unit`: 4px ou 8px. Utiliser une échelle basée sur cette unité (ex: 4, 8, 12, 16, 24, 32, 48, 64px).
 - **Shadcn/ui Customization Strategy:** _AI Instruction: When customizing Shadcn/ui components, your goal is to ensure they align seamlessly with the `[Project Name] Design System`'s tokens and interaction patterns. This means you will: 1. Override default styles using Tailwind utility classes mapped to our Design System tokens. 2. Adjust component structure or add/remove elements for our specific UX needs. 3. Ensure all interactive states (hover, focus, active, disabled) match our Design System’s specifications. 4. The final component must feel unique to our brand, not like a generic Shadcn/ui component. Document these customizations in Storybook._
-  Les composants Shadcn/ui seront utilisés comme base et entièrement personnalisés en utilisant Tailwind CSS pour correspondre aux tokens de couleur, typographie et espacement définis dans le Link-Pedia Design System. L'objectif est que les composants finaux s'intègrent parfaitement à l'esthétique épurée et professionnelle souhaitée, et ne ressemblent pas aux composants Shadcn/ui par défaut. Les états interactifs (survol, focus, actif) seront stylisés en utilisant les couleurs secondaires ou accent.
+  Les composants Shadcn/ui seront utilisés comme base et entièrement personnalisés en utilisant Tailwind CSS pour correspondre aux tokens de couleur, typographie et espacement définis dans le Linked-Pedia Design System. L'objectif est que les composants finaux s'intègrent parfaitement à l'esthétique épurée et professionnelle souhaitée, et ne ressemblent pas aux composants Shadcn/ui par défaut. Les états interactifs (survol, focus, actif) seront stylisés en utilisant les couleurs secondaires ou accent.
 - **Storybook Plan:** Storybook sera mis en place pour documenter et visualiser tous les composants UI personnalisés, facilitant leur réutilisation et assurant la cohérence du design.
   _[AI to Propose Design System and UI Strategy for User Validation]_
 
@@ -808,7 +808,7 @@ _AI Instruction: Confirm the final stack here after considering user input. You 
 
 - **Frontend :** Next.js 15 (avec App Router, TypeScript)
 - **Backend/Database :** Supabase (PostgreSQL, Auth, Storage, Edge Functions)
-- **Styling :** Tailwind CSS (avec Link-Pedia Design System basé sur Shadcn/ui)
+- **Styling :** Tailwind CSS (avec Linked-Pedia Design System basé sur Shadcn/ui)
 - **Langage :** TypeScript pour le frontend et le backend (Edge Functions).
 - **Librairies Auxiliaires :** Sélectionnées par l'Agent IA selon les besoins spécifiques des fonctionnalités (ex: librairies pour l'interaction avec l'API LinkedIn, gestion des fichiers, etc.).
 
@@ -871,10 +871,10 @@ L'Agent IA proposera des services spécifiques pour les fonctionnalités IA (gé
 _AI Instruction: You will adhere to a conventional project structure (e.g., the default Agentic Project Boilerplate structure in Section 5.8 if Next.js is chosen, or an equivalent standard structure for the selected framework), which typically uses Atomic Design principles for frontend frameworks. Key conventions generally include `PascalCase.tsx` (or equivalent for other languages) for components/pages, `kebab-case.ts` (or equivalent) for utils, and `camelCase` for functions/variables. Clarify any deviations if necessary for specific project needs in your technical proposals._
 
 - **Suggested Structure Overview (e.g., for Next.js App Router & Atomic Design):**
-  `    /app/(routes)
-    /components/{atoms,molecules,organisms,templates,ui}
-    /lib, /config, /styles, /public, /stories, /tests
-   `
+  `   /app/(routes)
+  /components/{atoms,molecules,organisms,templates,ui}
+  /lib, /config, /styles, /public, /stories, /tests
+`
   _This section confirms AI's adherence to predefined standards_
 
 ### 5.8. Agentic Project Boilerplate (Conceptual - AI to Assume)
@@ -1139,7 +1139,7 @@ _AI Agent Directive: For all MCP integrations, implement them following this sta
 _AI to Identify Key Risks based on Project Idea and Market Research_
 **Risques Clés :**
 
-- **Dépendance et limitations de l'API LinkedIn :** L'application repose fortement sur l'accès et les fonctionnalités fournies par l'API officielle de LinkedIn. Tout changement dans l'API ou les politiques de LinkedIn pourrait impacter les fonctionnalités de Link-Pedia.
+- **Dépendance et limitations de l'API LinkedIn :** L'application repose fortement sur l'accès et les fonctionnalités fournies par l'API officielle de LinkedIn. Tout changement dans l'API ou les politiques de LinkedIn pourrait impacter les fonctionnalités de Linked-Pedia.
 - **Qualité et pertinence des suggestions de l'IA :** L'efficacité de l'application dépend de la capacité de l'IA à générer et optimiser du contenu pertinent et performant. Des suggestions de mauvaise qualité pourraient décevoir les utilisateurs.
 - **Confiance des utilisateurs et sécurité des données :** Convaincre les utilisateurs de lier leur compte LinkedIn et de faire confiance à l'application pour gérer leurs données et publications est crucial. Tout incident de sécurité pourrait être dévastateur.
 - **Concurrence :** Le marché est compétitif. D'autres outils pourraient émerger avec des fonctionnalités similaires ou LinkedIn pourrait intégrer des fonctionnalités concurrentes nativement.
@@ -1165,7 +1165,7 @@ _AI to Identify Key External and Internal Dependencies_
   - Plateforme d'hébergement (ex: Vercel).
   - Services Supabase (Auth, Database, Storage, Edge Functions).
 - **Internes :**
-  - Le Design System Link-Pedia (Section 5.2).
+  - Le Design System Linked-Pedia (Section 5.2).
   - Les spécifications détaillées des fonctionnalités (Section 9.1).
   - Le processus de validation utilisateur (Section 1.11).
 

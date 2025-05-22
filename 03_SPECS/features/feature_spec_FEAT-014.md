@@ -11,7 +11,7 @@
 
 ### Objective
 
-Guider pas à pas les nouveaux utilisateurs ou les débutants dans l'utilisation des fonctionnalités clés de Link-Pedia et l'optimisation de leur présence LinkedIn. L'objectif est de faciliter la prise en main de l'application et d'aider les utilisateurs à obtenir rapidement de la valeur.
+Guider pas à pas les nouveaux utilisateurs ou les débutants dans l'utilisation des fonctionnalités clés de Linked-Pedia et l'optimisation de leur présence LinkedIn. L'objectif est de faciliter la prise en main de l'application et d'aider les utilisateurs à obtenir rapidement de la valeur.
 
 ### User Stories
 
@@ -163,7 +163,7 @@ Feature: Mode Assistant
 
   Scenario: Invitation et activation du mode assistant pour un nouvel utilisateur
     Given je suis un nouvel utilisateur
-    When je me connecte à Link-Pedia pour la première fois
+    When je me connecte à Linked-Pedia pour la première fois
     Then l'application affiche une invitation à activer le mode assistant
     When j'accepte l'invitation
     Then le mode assistant est activé

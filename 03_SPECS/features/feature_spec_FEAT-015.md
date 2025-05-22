@@ -11,7 +11,7 @@
 
 ### Objective
 
-Permettre à l'utilisateur de renseigner des informations sur lui-même, son activité, ses préférences et ses objectifs LinkedIn. Ces informations seront utilisées par l'IA pour personnaliser les suggestions de contenu, les conseils et l'audit de profil. L'objectif est de rendre l'expérience Link-Pedia plus pertinente et adaptée aux besoins individuels de l'utilisateur.
+Permettre à l'utilisateur de renseigner des informations sur lui-même, son activité, ses préférences et ses objectifs LinkedIn. Ces informations seront utilisées par l'IA pour personnaliser les suggestions de contenu, les conseils et l'audit de profil. L'objectif est de rendre l'expérience Linked-Pedia plus pertinente et adaptée aux besoins individuels de l'utilisateur.
 
 ### User Stories
 
@@ -164,7 +164,7 @@ Aucun.
 Feature: Gestion du Profil Utilisateur
 
   Scenario: Affichage et modification réussis des informations de profil
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     When je navigue vers la section "Mon Profil"
     Then l'application affiche mes informations de profil actuelles
     When je modifie une ou plusieurs informations
@@ -174,7 +174,7 @@ Feature: Gestion du Profil Utilisateur
     And l'application confirme la sauvegarde
 
   Scenario: Utilisation des informations de profil par l'IA
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And j'ai renseigné des informations sur mon activité, mes préférences et mes objectifs dans mon profil
     When j'utilise une fonctionnalité IA (ex: Générateur de Posts, Conseils Personnalisés)
     Then les suggestions ou conseils générés sont personnalisés et pertinents en fonction des informations de mon profil

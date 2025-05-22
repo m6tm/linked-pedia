@@ -62,7 +62,7 @@ Analyser le profil LinkedIn de l'utilisateur (en tenant compte du SSI si possibl
 
 ### Business Rules
 
-1.  Un audit de profil ne peut être lancé que si un compte LinkedIn principal est lié à l'utilisateur Link-Pedia.
+1.  Un audit de profil ne peut être lancé que si un compte LinkedIn principal est lié à l'utilisateur Linked-Pedia.
 2.  Les recommandations doivent être personnalisées et basées sur l'analyse du profil spécifique de l'utilisateur.
 3.  Les résultats de l'audit doivent être stockés pour permettre une consultation ultérieure.
 
@@ -100,7 +100,7 @@ Aucun.
     - `linkedin_account_id`: `uuid` (Clé étrangère vers `public.linkedin_accounts.id`)
     - `audit_date`: `timestamp with time zone` (Date et heure de l'audit)
     - `linkedin_ssi_score`: `integer` (Score SSI si accessible, peut être null)
-    - `calculated_score`: `integer` (Score calculé par Link-Pedia si SSI non accessible ou en complément)
+    - `calculated_score`: `integer` (Score calculé par Linked-Pedia si SSI non accessible ou en complément)
     - `sections_scores`: `jsonb` (Scores détaillés par section du profil)
     - `recommendations`: `jsonb` (Liste des recommandations d'optimisation)
     - `raw_profile_data`: `jsonb` (Données brutes du profil LinkedIn utilisées pour l'audit - à évaluer pour la confidentialité et le stockage)
@@ -189,7 +189,7 @@ Aucun.
 Feature: Audit de Profil LinkedIn
 
   Scenario: Lancement et affichage réussi de l'audit de profil
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And mon compte LinkedIn est lié
     When je navigue vers la page "Audit de Profil"
     And je clique sur le bouton "Lancer l'audit"
@@ -200,20 +200,20 @@ Feature: Audit de Profil LinkedIn
     And l'application affiche le rapport d'audit complet avec mon score et mes recommandations
 
   Scenario: Affichage du message si le compte LinkedIn n'est pas lié
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And mon compte LinkedIn n'est pas lié
     When je navigue vers la page "Audit de Profil"
     Then l'application affiche un message m'invitant à lier mon compte LinkedIn
     And le bouton "Lancer l'audit" n'est pas disponible
 
   Scenario: Consultation du dernier rapport d'audit
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And j'ai déjà lancé un audit de profil
     When je navigue vers la page "Audit de Profil"
     Then l'application affiche automatiquement mon dernier rapport d'audit
 
   Scenario: Affichage d'un résumé de l'audit sur le tableau de bord
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And j'ai déjà lancé un audit de profil
     When je navigue vers le tableau de bord
     Then l'application affiche un résumé de mon dernier audit de profil, incluant mon score et un lien vers le rapport complet

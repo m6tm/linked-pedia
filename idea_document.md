@@ -12,7 +12,7 @@ _Purpose: Capture the essence of the project for Sections 1.2 and 3.1 of the PRD
 ### 1. Project Working Title
 
 ```
-Link-Pedia
+Linked-Pedia
 ```
 
 **Example:** "Neighborhood Carpooling App"
@@ -36,7 +36,7 @@ Les professionnels ont du mal à créer du contenu LinkedIn pertinent et engagea
 ### 4. Proposed Solution (How the Project Solves the Problem)
 
 ```
-Link-Pedia offre une suite d'outils basés sur l'IA pour générer et optimiser des posts, organiser les publications, analyser les performances et fournir des recommandations personnalisées pour l'amélioration du profil et de la stratégie de contenu LinkedIn.
+Linked-Pedia offre une suite d'outils basés sur l'IA pour générer et optimiser des posts, organiser les publications, analyser les performances et fournir des recommandations personnalisées pour l'amélioration du profil et de la stratégie de contenu LinkedIn.
 ```
 
 **Example:** "By creating a trust network based on locality, with a simple interface to offer/search for trips instantly, and verified profiles (optional) within a neighborhood community."

@@ -166,7 +166,7 @@ Aucun.
 Feature: Générateur d'Idées de Posts
 
   Scenario: Génération et affichage réussis d'idées de posts
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     When je navigue vers la section "Créer un Post" et choisis "Idées de Posts"
     And je saisis un thème principal (ex: "Marketing Digital")
     And je clique sur le bouton "Générer des idées"
@@ -184,7 +184,7 @@ Feature: Générateur d'Idées de Posts
     And le générateur de brouillon est pré-rempli ou basé sur l'idée sélectionnée
 
   Scenario: Affichage d'un message d'erreur si la génération échoue
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And le service IA de génération d'idées est indisponible ou retourne une erreur
     When je navigue vers la section "Créer un Post" et choisis "Idées de Posts"
     And je saisis un thème principal

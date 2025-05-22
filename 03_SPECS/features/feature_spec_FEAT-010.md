@@ -185,7 +185,7 @@ Aucun.
 Feature: Programmation de Posts
 
   Scenario: Programmation réussie d'un brouillon de post
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And j'ai un post en statut "brouillon"
     When je choisis de programmer ce post
     And je sélectionne une date et une heure futures
@@ -195,16 +195,16 @@ Feature: Programmation de Posts
     And le post apparaît dans la section "Programmés" du tableau de bord
 
   Scenario: Publication automatique d'un post programmé
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And j'ai un post en statut "programmé" avec une date et une heure futures
     When la date et l'heure de programmation sont atteintes
     Then le mécanisme de déclenchement s'active
     And l'application appelle l'API LinkedIn pour publier le post
     And le post est publié sur mon profil LinkedIn
-    And le statut du post dans Link-Pedia est mis à jour à "publié"
+    And le statut du post dans Linked-Pedia est mis à jour à "publié"
 
   Scenario: Modification d'un post programmé avant publication
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And j'ai un post en statut "programmé" dont la date de publication n'est pas encore atteinte
     When je modifie le contenu ou la date/heure de programmation de ce post
     And je sauvegarde les modifications
@@ -212,14 +212,14 @@ Feature: Programmation de Posts
     And le post reste en statut "programmé" avec les nouvelles informations
 
   Scenario: Suppression d'un post programmé avant publication
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And j'ai un post en statut "programmé" dont la date de publication n'est pas encore atteinte
     When je supprime ce post programmé
     And je confirme la suppression
     Then le post est supprimé de ma liste de posts programmés
 
   Scenario: Échec de la programmation avec une date/heure passée
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And j'ai un post en statut "brouillon"
     When je choisis de programmer ce post
     And je sélectionne une date et une heure passées

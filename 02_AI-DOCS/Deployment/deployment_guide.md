@@ -1,8 +1,8 @@
-# Deployment Guide - Link-Pedia
+# Deployment Guide - Linked-Pedia
 
 ## Overview
 
-- **Project:** Link-Pedia
+- **Project:** Linked-Pedia
 - **Environment:** Production/Staging
 - **Last Updated:** 22/05/2025
 
@@ -192,7 +192,7 @@ En cas de sinistre majeur affectant la base de données ou le stockage :
 
 #### Issue 2: Échec de publication/programmation d'un post
 
-- **Symptoms:** Le post ne s'affiche pas sur LinkedIn à l'heure prévue ou immédiatement. Le statut dans Link-Pedia passe à 'échec'.
+- **Symptoms:** Le post ne s'affiche pas sur LinkedIn à l'heure prévue ou immédiatement. Le statut dans Linked-Pedia passe à 'échec'.
 - **Cause:** Token d'accès LinkedIn expiré ou invalide, permissions insuffisantes, contenu du post rejeté par LinkedIn, problème temporaire avec l'API LinkedIn, erreur dans l'Edge Function de publication.
 - **Resolution:** Vérifier le statut de liaison du compte LinkedIn de l'utilisateur. Vérifier les logs de l'Edge Function de publication pour les messages d'erreur de l'API LinkedIn. S'assurer que le token d'accès est valide et rafraîchi correctement. Vérifier le contenu du post par rapport aux politiques de contenu de LinkedIn.
 

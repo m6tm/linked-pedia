@@ -1,8 +1,8 @@
-# Design Conventions and Style Guide - Link-Pedia
+# Design Conventions and Style Guide - Linked-Pedia
 
 ## Overview
 
-This document outlines the design conventions and style guidelines for the Link-Pedia project, aiming for a professional-grade User Experience (UX) and User Interface (UI) that aligns with modern best practices, such as those seen in successful Y Combinator startups. Following these conventions ensures consistency, intuitiveness, elegance, and a "pixel-perfect" aesthetic across the application.
+This document outlines the design conventions and style guidelines for the Linked-Pedia project, aiming for a professional-grade User Experience (UX) and User Interface (UI) that aligns with modern best practices, such as those seen in successful Y Combinator startups. Following these conventions ensures consistency, intuitiveness, elegance, and a "pixel-perfect" aesthetic across the application.
 
 This document should be completed based on the project's specific needs and after reviewing the insights from "[`AI_Design_Agent_Optimization.md`](../Documentation/AI_Design_Agent_Optimization.md:1)".
 
@@ -13,7 +13,7 @@ _(Refer to Section II of [`AI_Design_Agent_Optimization.md`](../Documentation/AI
 - **Clarity and Simplicity:**
   - _Project Specifics:_ L'interface doit être épurée, avec un minimum d'éléments distrayants. Utiliser des libellés clairs et concis. Les parcours utilisateurs doivent être directs et sans ambiguïté. Utiliser l'espace blanc généreusement pour séparer les éléments et améliorer la lisibilité.
 - **Consistency:**
-  - _Project Specifics:_ Maintenir une cohérence visuelle et interactive rigoureuse. Les styles des boutons, des champs de formulaire, de la typographie, des icônes et des éléments de navigation doivent être uniformes à travers toute l'application. Utiliser le Design System Link-Pedia comme source unique de vérité pour les styles.
+  - _Project Specifics:_ Maintenir une cohérence visuelle et interactive rigoureuse. Les styles des boutons, des champs de formulaire, de la typographie, des icônes et des éléments de navigation doivent être uniformes à travers toute l'application. Utiliser le Design System Linked-Pedia comme source unique de vérité pour les styles.
 - **User Control and Freedom/Predictability:**
   - _Project Specifics:_ Fournir des mécanismes clairs pour annuler les actions (ex: annuler la modification d'un brouillon). Assurer des chemins de sortie évidents des modales ou des flux. Utiliser des dialogues de confirmation pour les actions destructrices (ex: supprimer un post). Les interactions doivent être prévisibles en se basant sur les conventions UI standard.
 - **Accessibility and Inclusivity (WCAG POUR Principles):**
@@ -156,8 +156,8 @@ _(Refer to Section II, "Accessibility and Inclusivity" and Section V, "Visual Re
   - Does the design adhere to the defined `tailwind.config.js` (colors, typography, spacing, etc.)?
   - Are components well-abstracted and reusable?
   - Is global CSS used appropriately and integrated correctly with Tailwind?
-  - **Les tokens du Link-Pedia Design System sont-ils utilisés de manière cohérente ?**
-  - **Les composants Shadcn/ui sont-ils suffisamment personnalisés pour correspondre à l'esthétique Link-Pedia ?**
+  - **Les tokens du Linked-Pedia Design System sont-ils utilisés de manière cohérente ?**
+  - **Les composants Shadcn/ui sont-ils suffisamment personnalisés pour correspondre à l'esthétique Linked-Pedia ?**
 - **UI Polish:**
   - Are micro-interactions enhancing the UX without being distracting?
   - Is typography applied consistently and legibly?

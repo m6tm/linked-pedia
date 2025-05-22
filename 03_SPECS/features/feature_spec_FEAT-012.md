@@ -165,7 +165,7 @@ Aucun.
 Feature: Conseils Personnalisés
 
   Scenario: Affichage réussi des conseils personnalisés
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And j'ai des statistiques de posts et/ou un rapport d'audit de profil disponibles
     When je navigue vers la section "Conseils Personnalisés"
     Then l'application affiche un indicateur de chargement
@@ -175,13 +175,13 @@ Feature: Conseils Personnalisés
     And les conseils sont basés sur mes données et semblent pertinents
 
   Scenario: Affichage d'un message si les données sont insuffisantes
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And je n'ai pas encore assez de données (ex: aucun post publié)
     When je navigue vers la section "Conseils Personnalisés"
     Then l'application affiche un message m'informant que plus de données sont nécessaires pour générer des conseils personnalisés
 
   Scenario: Affichage d'un message d'erreur si la génération échoue
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And le service IA de génération de conseils est indisponible ou retourne une erreur
     When je navigue vers la section "Conseils Personnalisés"
     Then l'application affiche un indicateur de chargement

@@ -165,7 +165,7 @@ Aucun.
 Feature: Optimiseur de Posts
 
   Scenario: Optimisation réussie d'un brouillon de post
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And je suis en train de modifier un brouillon de post
     When je clique sur le bouton "Optimiser"
     Then l'application affiche un indicateur de chargement
@@ -180,7 +180,7 @@ Feature: Optimiseur de Posts
     Then le contenu de mon brouillon de post est remplacé par le contenu de la suggestion choisie
 
   Scenario: Affichage d'un message d'erreur si l'optimisation échoue
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And le service IA d'optimisation est indisponible ou retourne une erreur
     When je suis en train de modifier un brouillon de post
     And je clique sur le bouton "Optimiser"

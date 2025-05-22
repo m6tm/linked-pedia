@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "projectName": "Link-Pedia",
+  "projectName": "Linked-Pedia",
   "projectType": "Application web nextjs 15",
-  "projectObjective": "Développer une application web Next.js 15 nommée Link-Pedia pour aider les professionnels à optimiser leur présence sur LinkedIn grâce à la génération, l'édition, l'organisation et l'analyse de posts, ainsi qu'un audit de profil.",
+  "projectObjective": "Développer une application web Next.js 15 nommée Linked-Pedia pour aider les professionnels à optimiser leur présence sur LinkedIn grâce à la génération, l'édition, l'organisation et l'analyse de posts, ainsi qu'un audit de profil.",
   "prdDocumentPath": "project_prd.md",
   "tasksDocumentPath": "tasks/tasks.json",
   "currentWorkflowPhase": "taskManagement",

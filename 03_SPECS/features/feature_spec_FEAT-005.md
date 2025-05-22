@@ -187,7 +187,7 @@ Aucun.
 Feature: Générateur de Posts à partir de Fichier/Lien
 
   Scenario: Génération et sauvegarde réussie d'un brouillon à partir d'un fichier
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     When je navigue vers la section "Créer un Post" et choisis "À partir de Fichier/Lien"
     And je télécharge un fichier supporté (ex: PDF)
     Then l'application affiche un indicateur de progression/chargement
@@ -198,7 +198,7 @@ Feature: Générateur de Posts à partir de Fichier/Lien
     Then le brouillon est sauvegardé dans mon tableau de bord
 
   Scenario: Génération et sauvegarde réussie d'un brouillon à partir d'un lien
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     When je navigue vers la section "Créer un Post" et choisis "À partir de Fichier/Lien"
     And je colle un lien supporté (ex: URL d'article)
     And je clique sur un bouton "Générer à partir du lien" (ou action similaire)
@@ -210,13 +210,13 @@ Feature: Générateur de Posts à partir de Fichier/Lien
     Then le brouillon est sauvegardé dans mon tableau de bord
 
   Scenario: Affichage d'un message d'erreur pour un format non supporté
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     When je navigue vers la section "Créer un Post" et choisis "À partir de Fichier/Lien"
     And je télécharge un fichier non supporté (ex: .exe)
     Then l'application affiche un message d'erreur clair indiquant que le format n'est pas supporté
 
   Scenario: Affichage d'un message d'erreur si le traitement échoue
-    Given je suis connecté à Link-Pedia
+    Given je suis connecté à Linked-Pedia
     And le traitement du fichier/lien ou l'appel IA échoue
     When je navigue vers la section "Créer un Post" et choisis "À partir de Fichier/Lien"
     And je soumets un fichier/lien

@@ -1,6 +1,6 @@
-# Index de la Documentation Technique - Link-Pedia
+# Index de la Documentation Technique - Linked-Pedia
 
-Ce document sert d'index central pour toute la documentation technique et les spécifications du projet Link-Pedia. Il référence les documents clés générés et les guides de référence importants pour l'équipe de développement.
+Ce document sert d'index central pour toute la documentation technique et les spécifications du projet Linked-Pedia. Il référence les documents clés générés et les guides de référence importants pour l'équipe de développement.
 
 ## Documents Générés Spécifiques au Projet
 

@@ -5,12 +5,12 @@
 - **API Provider:** LinkedIn
 - **API Version:** Utiliser la version la plus récente et stable disponible via le programme développeur LinkedIn.
 - **Documentation URL:** [Lien vers la documentation officielle de l'API LinkedIn - à insérer lors de l'implémentation]
-- **Purpose:** Permettre à Link-Pedia d'authentifier les utilisateurs, de publier et programmer des posts, de récupérer les statistiques de performance des posts et d'accéder aux données de profil nécessaires pour l'audit.
+- **Purpose:** Permettre à Linked-Pedia d'authentifier les utilisateurs, de publier et programmer des posts, de récupérer les statistiques de performance des posts et d'accéder aux données de profil nécessaires pour l'audit.
 
 ## Authentication
 
-- **Authentication Type:** OAuth 2.0. L'utilisateur autorisera Link-Pedia à accéder à son compte via le flux standard OAuth.
-- **Credential Storage:** Les tokens d'accès et de rafraîchissement obtenus via OAuth seront stockés de manière sécurisée dans la base de données Supabase, liés à l'utilisateur. Les clés API (Client ID, Client Secret) de l'application Link-Pedia seront stockées dans les variables d'environnement sécurisées de Supabase Edge Functions.
+- **Authentication Type:** OAuth 2.0. L'utilisateur autorisera Linked-Pedia à accéder à son compte via le flux standard OAuth.
+- **Credential Storage:** Les tokens d'accès et de rafraîchissement obtenus via OAuth seront stockés de manière sécurisée dans la base de données Supabase, liés à l'utilisateur. Les clés API (Client ID, Client Secret) de l'application Linked-Pedia seront stockées dans les variables d'environnement sécurisées de Supabase Edge Functions.
 - **Token Management:** Implémenter un mécanisme pour rafraîchir les tokens d'accès LinkedIn avant leur expiration en utilisant le token de rafraîchissement stocké. Gérer les cas où le rafraîchissement échoue (ex: demander à l'utilisateur de reconnecter son compte).
 
 ## Key Endpoints
@@ -21,7 +21,7 @@ Les endpoints spécifiques dépendront de la version exacte de l'API utilisée, 
 
 - **URL:** `https://www.linkedin.com/oauth/v2/authorization` (pour initier le flux) et `https://www.linkedin.com/oauth/v2/accessToken` (pour échanger le code contre des tokens).
 - **Method:** `GET` (autorisation), `POST` (token).
-- **Purpose:** Permettre à l'utilisateur d'autoriser Link-Pedia à accéder à son compte LinkedIn et obtenir les tokens nécessaires.
+- **Purpose:** Permettre à l'utilisateur d'autoriser Linked-Pedia à accéder à son compte LinkedIn et obtenir les tokens nécessaires.
 
 #### Request Format (Authorization - Example)
 
@@ -97,7 +97,7 @@ Authorization: Bearer {access_token}
 
 ### Endpoint 3: Publication et Programmation de Posts
 
-- **URL:** `https://api.linkedin.com/v2/ugcPosts` (pour les nouveaux posts), potentiellement d'autres endpoints pour la programmation si l'API offre cette fonctionnalité directement (sinon, la programmation sera gérée côté Link-Pedia et la publication déclenchée à l'heure prévue via l'API).
+- **URL:** `https://api.linkedin.com/v2/ugcPosts` (pour les nouveaux posts), potentiellement d'autres endpoints pour la programmation si l'API offre cette fonctionnalité directement (sinon, la programmation sera gérée côté Linked-Pedia et la publication déclenchée à l'heure prévue via l'API).
 - **Method:** `POST`
 - **Purpose:** Publier un nouveau post sur le profil LinkedIn de l'utilisateur ou le programmer.
 
@@ -135,19 +135,19 @@ Content-Type: application/json
 
 #### Error Handling
 
-| Status Code | Meaning      | Handling Strategy                                                                                                  |
-| ----------- | ------------ | ------------------------------------------------------------------------------------------------------------------ |
-| 400         | Bad Request  | Validation côté Link-Pedia avant l'appel API. Si l'erreur persiste, afficher un message d'erreur détaillé, logger. |
-| 401         | Unauthorized | Tenter de rafraîchir le token. Si échec, demander à l'utilisateur de reconnecter son compte.                       |
-| 403         | Forbidden    | Permissions insuffisantes. Vérifier les scopes demandés lors de l'autorisation.                                    |
-| 429         | Rate Limited | Voir section Taux Limites.                                                                                         |
-| 5xx         | Server Error | Tenter une nouvelle requête. Si échec persistant, afficher un message d'erreur, logger.                            |
+| Status Code | Meaning      | Handling Strategy                                                                                                    |
+| ----------- | ------------ | -------------------------------------------------------------------------------------------------------------------- |
+| 400         | Bad Request  | Validation côté Linked-Pedia avant l'appel API. Si l'erreur persiste, afficher un message d'erreur détaillé, logger. |
+| 401         | Unauthorized | Tenter de rafraîchir le token. Si échec, demander à l'utilisateur de reconnecter son compte.                         |
+| 403         | Forbidden    | Permissions insuffisantes. Vérifier les scopes demandés lors de l'autorisation.                                      |
+| 429         | Rate Limited | Voir section Taux Limites.                                                                                           |
+| 5xx         | Server Error | Tenter une nouvelle requête. Si échec persistant, afficher un message d'erreur, logger.                              |
 
 ### Endpoint 4: Statistiques de Posts
 
 - **URL:** Endpoints liés aux analytics ou aux posts spécifiques (la structure exacte dépend de l'API LinkedIn).
 - **Method:** `GET`
-- **Purpose:** Récupérer les métriques de performance (impressions, réactions, commentaires, partages) pour les posts publiés via Link-Pedia.
+- **Purpose:** Récupérer les métriques de performance (impressions, réactions, commentaires, partages) pour les posts publiés via Linked-Pedia.
 
 #### Request Format (Example - conceptuel)
 
@@ -170,13 +170,13 @@ Authorization: Bearer {access_token}
 
 #### Error Handling
 
-| Status Code | Meaning      | Handling Strategy                                                                                                       |
-| ----------- | ------------ | ----------------------------------------------------------------------------------------------------------------------- |
-| 401         | Unauthorized | Tenter de rafraîchir le token. Si échec, demander à l'utilisateur de reconnecter son compte.                            |
-| 403         | Forbidden    | Permissions insuffisantes.                                                                                              |
-| 404         | Not Found    | Post non trouvé (peut arriver si le post est supprimé sur LinkedIn). Marquer le post comme introuvable dans Link-Pedia. |
-| 429         | Rate Limited | Voir section Taux Limites.                                                                                              |
-| 5xx         | Server Error | Tenter une nouvelle requête. Si échec persistant, afficher un message d'erreur, logger.                                 |
+| Status Code | Meaning      | Handling Strategy                                                                                                         |
+| ----------- | ------------ | ------------------------------------------------------------------------------------------------------------------------- |
+| 401         | Unauthorized | Tenter de rafraîchir le token. Si échec, demander à l'utilisateur de reconnecter son compte.                              |
+| 403         | Forbidden    | Permissions insuffisantes.                                                                                                |
+| 404         | Not Found    | Post non trouvé (peut arriver si le post est supprimé sur LinkedIn). Marquer le post comme introuvable dans Linked-Pedia. |
+| 429         | Rate Limited | Voir section Taux Limites.                                                                                                |
+| 5xx         | Server Error | Tenter une nouvelle requête. Si échec persistant, afficher un message d'erreur, logger.                                   |
 
 ## Rate Limits
 
@@ -198,12 +198,12 @@ Authorization: Bearer {access_token}
 
 ### Internal Model to API
 
-| Internal Field (Table `posts`) | API Field (Exemple)        | Transformation                                                                                     |
-| ------------------------------ | -------------------------- | -------------------------------------------------------------------------------------------------- |
-| `content`                      | `shareCommentary.text`     | Direct.                                                                                            |
-| `linkedin_account_id`          | `author`                   | Mapper l'ID interne à l'URN LinkedIn.                                                              |
-| `status`                       | `lifecycleState`           | Mapper "publié" à "PUBLISHED", etc.                                                                |
-| `scheduled_date`               | N/A (géré côté Link-Pedia) | La programmation est gérée en interne ; l'appel API de publication est déclenché à l'heure prévue. |
+| Internal Field (Table `posts`) | API Field (Exemple)          | Transformation                                                                                     |
+| ------------------------------ | ---------------------------- | -------------------------------------------------------------------------------------------------- |
+| `content`                      | `shareCommentary.text`       | Direct.                                                                                            |
+| `linkedin_account_id`          | `author`                     | Mapper l'ID interne à l'URN LinkedIn.                                                              |
+| `status`                       | `lifecycleState`             | Mapper "publié" à "PUBLISHED", etc.                                                                |
+| `scheduled_date`               | N/A (géré côté Linked-Pedia) | La programmation est gérée en interne ; l'appel API de publication est déclenché à l'heure prévue. |
 
 ## Implementation Details
 
