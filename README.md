@@ -6,9 +6,7 @@ Ce document liste tous les fichiers et répertoires du projet Linked-Pedia pour 
 
 - [`core_concept.md`](core_concept.md)
 - [`idea_document.md`](idea_document.md)
-- [`logic.md`](logic.md)
 - [`market_research.md`](market_research.md)
-- [`project_description.md`](project_description.md)
 - [`project_prd.md`](project_prd.md)
 - [`project_session_state.json`](project_session_state.json)
 
