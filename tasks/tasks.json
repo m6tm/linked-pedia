@@ -17,7 +17,85 @@
       "priority": "high",
       "details": "Basé sur la section 3.1 (FEAT-001) et 3.2 (FEAT-001) du project_prd.md. Doit être simple, rapide et sécurisé.",
       "testStrategy": "Tester les flux d'inscription et de connexion avec des cas valides et invalides.",
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "FEAT-001.1",
+          "title": "Configurer Supabase Auth",
+          "description": "Mettre en place l'authentification Supabase pour le projet.",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "high",
+          "details": "Configurer Supabase Auth selon la documentation officielle. Définir les méthodes d'authentification (email/password). Référencer la section 5.4 du project_prd.md.",
+          "testStrategy": "Vérifier que la configuration est active dans le tableau de bord Supabase.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-001.2",
+          "title": "Créer Composant UI Formulaire Inscription",
+          "description": "Développer le composant frontend pour le formulaire d'inscription.",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "high",
+          "details": "Créer un composant React/Next.js pour le formulaire d'inscription. Inclure les champs email, mot de passe, confirmation mot de passe. Appliquer les conventions de design (02_AI-DOCS/Conventions/design_conventions.md) et les principes de AI_Design_Agent_Optimization.md.",
+          "testStrategy": "Vérifier le rendu du formulaire et la validation côté client (basique).",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-001.3",
+          "title": "Implémenter Logique Frontend Inscription",
+          "description": "Connecter le formulaire d'inscription à l'API Supabase Auth.",
+          "status": "todo",
+          "dependencies": ["FEAT-001.1", "FEAT-001.2"],
+          "priority": "high",
+          "details": "Utiliser le client Supabase JS pour appeler la fonction d'inscription. Gérer les états de chargement et d'erreur. Référencer la section 3.1 (FEAT-001) du project_prd.md.",
+          "testStrategy": "Tester l'inscription d'un nouvel utilisateur avec des données valides et invalides.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-001.4",
+          "title": "Créer Composant UI Formulaire Connexion",
+          "description": "Développer le composant frontend pour le formulaire de connexion.",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "high",
+          "details": "Créer un composant React/Next.js pour le formulaire de connexion. Inclure les champs email et mot de passe. Appliquer les conventions de design (02_AI-DOCS/Conventions/design_conventions.md) et les principes de AI_Design_Agent_Optimization.md.",
+          "testStrategy": "Vérifier le rendu du formulaire.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-001.5",
+          "title": "Implémenter Logique Frontend Connexion",
+          "description": "Connecter le formulaire de connexion à l'API Supabase Auth.",
+          "status": "todo",
+          "dependencies": ["FEAT-001.1", "FEAT-001.4"],
+          "priority": "high",
+          "details": "Utiliser le client Supabase JS pour appeler la fonction de connexion. Gérer les états de chargement et d'erreur. Référencer la section 3.1 (FEAT-001) du project_prd.md.",
+          "testStrategy": "Tester la connexion avec des identifiants valides et invalides.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-001.6",
+          "title": "Implémenter Logique Frontend Déconnexion",
+          "description": "Ajouter la fonctionnalité de déconnexion.",
+          "status": "todo",
+          "dependencies": ["FEAT-001.1"],
+          "priority": "high",
+          "details": "Utiliser le client Supabase JS pour appeler la fonction de déconnexion. Rediriger l'utilisateur après déconnexion. Référencer la section 3.1 (FEAT-001) du project_prd.md.",
+          "testStrategy": "Tester la déconnexion et la redirection.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-001.7",
+          "title": "Tests Authentification Frontend",
+          "description": "Écrire et exécuter des tests pour les flux d'inscription, connexion et déconnexion.",
+          "status": "todo",
+          "dependencies": ["FEAT-001.3", "FEAT-001.5", "FEAT-001.6"],
+          "priority": "high",
+          "details": "Écrire des tests unitaires pour les fonctions d'appel API et des tests d'intégration pour les flux complets. Référencer la section 6.1 du project_prd.md.",
+          "testStrategy": "Exécuter les tests et s'assurer qu'ils passent.",
+          "subtasks": []
+        }
+      ]
     },
     {
       "id": "FEAT-002",
@@ -28,7 +106,85 @@
       "priority": "high",
       "details": "Basé sur la section 3.1 (FEAT-002) et 3.2 (FEAT-002) du project_prd.md. Nécessite l'intégration de l'API LinkedIn.",
       "testStrategy": "Tester la connexion réussie et la gestion des erreurs d'autorisation.",
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "FEAT-002.1",
+          "title": "Rechercher Doc API LinkedIn",
+          "description": "Rechercher et comprendre la documentation officielle de l'API LinkedIn pour l'intégration d'applications tierces et le flux OAuth 2.0.",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "high",
+          "details": "Identifier les endpoints nécessaires pour l'autorisation et l'accès de base au profil. Référencer la section 3.1 (FEAT-002) et 5.6 du project_prd.md.",
+          "testStrategy": "Compiler un résumé des endpoints et du flux OAuth.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-002.2",
+          "title": "Configurer App Portial Développeur LinkedIn",
+          "description": "Créer et configurer l'application dans le portail développeur LinkedIn pour obtenir les clés API et les secrets.",
+          "status": "todo",
+          "dependencies": ["FEAT-002.1"],
+          "priority": "high",
+          "details": "Cette tâche nécessite une action manuelle de l'utilisateur. Fournir des instructions claires à l'utilisateur sur les étapes à suivre dans le portail développeur LinkedIn. Référencer la section 3.1 (FEAT-002) et 5.6 du project_prd.md.",
+          "testStrategy": "Confirmation par l'utilisateur que l'application est configurée et les clés fournies.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-002.3",
+          "title": "Implémenter Flux Autorisation OAuth 2.0",
+          "description": "Mettre en œuvre le processus d'autorisation OAuth 2.0 pour permettre aux utilisateurs de lier leur compte LinkedIn.",
+          "status": "todo",
+          "dependencies": ["FEAT-002.2"],
+          "priority": "high",
+          "details": "Implémenter la redirection vers la page d'autorisation LinkedIn et la gestion du callback avec le code d'autorisation. Utiliser potentiellement une Edge Function Supabase pour la partie backend. Référencer la section 3.1 (FEAT-002) et 5.6 du project_prd.md.",
+          "testStrategy": "Tester le flux complet d'autorisation, de la redirection à la réception du code.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-002.4",
+          "title": "Stocker Tokens Accès LinkedIn",
+          "description": "Stocker de manière sécurisée les tokens d'accès et de rafraîchissement LinkedIn obtenus via OAuth.",
+          "status": "todo",
+          "dependencies": ["FEAT-002.3"],
+          "priority": "high",
+          "details": "Stocker les tokens dans la base de données Supabase, associés à l'utilisateur. Assurer le chiffrement si nécessaire. Référencer la section 3.1 (FEAT-002), 4.3 et 5.5 du project_prd.md.",
+          "testStrategy": "Vérifier que les tokens sont stockés correctement et en toute sécurité.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-002.5",
+          "title": "Implémenter Appel API Base LinkedIn",
+          "description": "Effectuer un premier appel à l'API LinkedIn pour vérifier que l'intégration fonctionne (ex: récupérer l'ID ou le nom de l'utilisateur connecté).",
+          "status": "todo",
+          "dependencies": ["FEAT-002.4"],
+          "priority": "high",
+          "details": "Utiliser le token d'accès stocké pour faire un appel simple à un endpoint public de l'API LinkedIn. Référencer la section 3.1 (FEAT-002) et 5.6 du project_prd.md.",
+          "testStrategy": "Vérifier que l'appel API réussit et retourne les informations attendues.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-002.6",
+          "title": "Gérer Renouvellement Tokens LinkedIn",
+          "description": "Mettre en place la logique pour rafraîchir les tokens d'accès LinkedIn avant leur expiration.",
+          "status": "todo",
+          "dependencies": ["FEAT-002.4"],
+          "priority": "high",
+          "details": "Utiliser le token de rafraîchissement pour obtenir de nouveaux tokens d'accès. Automatiser ce processus. Référencer la section 3.1 (FEAT-002) et 5.6 du project_prd.md.",
+          "testStrategy": "Tester le processus de renouvellement des tokens.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-002.7",
+          "title": "Tests Intégration LinkedIn API",
+          "description": "Écrire et exécuter des tests pour le flux d'autorisation et les appels API de base.",
+          "status": "todo",
+          "dependencies": ["FEAT-002.5", "FEAT-002.6"],
+          "priority": "high",
+          "details": "Écrire des tests d'intégration couvrant le flux OAuth, le stockage des tokens et un appel API simple. Référencer la section 6.1 du project_prd.md.",
+          "testStrategy": "Exécuter les tests et s'assurer qu'ils passent.",
+          "subtasks": []
+        }
+      ]
     },
     {
       "id": "FEAT-003",
@@ -39,7 +195,74 @@
       "priority": "high",
       "details": "Basé sur la section 3.1 (FEAT-003), 3.2 (FEAT-003) et le cas d'utilisation associé du project_prd.md. Doit être insightful et actionable.",
       "testStrategy": "Vérifier la pertinence de l'analyse et des recommandations pour différents profils.",
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "FEAT-003.1",
+          "title": "Implémenter Appel API Profil LinkedIn",
+          "description": "Effectuer les appels API nécessaires pour récupérer les données du profil LinkedIn de l'utilisateur.",
+          "status": "todo",
+          "dependencies": ["FEAT-002.5"],
+          "priority": "high",
+          "details": "Utiliser les tokens d'accès pour interroger les endpoints de l'API LinkedIn fournissant les informations du profil (titre, résumé, expérience, éducation, etc.). Référencer la section 3.1 (FEAT-003) et 5.6 du project_prd.md.",
+          "testStrategy": "Vérifier que les données du profil sont correctement récupérées.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-003.2",
+          "title": "Développer Logique Calcul Score Audit",
+          "description": "Implémenter la logique pour calculer un score d'audit basé sur les données du profil LinkedIn.",
+          "status": "todo",
+          "dependencies": ["FEAT-003.1"],
+          "priority": "high",
+          "details": "Développer un algorithme pour évaluer différents aspects du profil (complétude, mots-clés, activité, etc.), potentiellement basé sur le concept du SSI. Référencer la section 3.1 (FEAT-003) du project_prd.md.",
+          "testStrategy": "Tester la logique de calcul avec différents jeux de données de profil.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-003.3",
+          "title": "Développer Logique Génération Recommandations",
+          "description": "Implémenter la logique pour générer des recommandations personnalisées pour l'optimisation du profil.",
+          "status": "todo",
+          "dependencies": ["FEAT-003.2"],
+          "priority": "high",
+          "details": "Créer des règles ou utiliser un modèle pour proposer des suggestions concrètes basées sur le score d'audit et l'analyse du profil. Référencer la section 3.1 (FEAT-003) du project_prd.md.",
+          "testStrategy": "Évaluer la pertinence et la qualité des recommandations générées pour divers profils.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-003.4",
+          "title": "Créer Composant UI Rapport Audit",
+          "description": "Développer le composant frontend pour afficher le rapport d'audit du profil.",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "high",
+          "details": "Créer un composant React/Next.js pour présenter le score d'audit et les différentes sections analysées. Appliquer les conventions de design (02_AI-DOCS/Conventions/design_conventions.md) et les principes de AI_Design_Agent_Optimization.md.",
+          "testStrategy": "Vérifier le rendu du rapport avec différentes données.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-003.5",
+          "title": "Afficher Recommandations UI",
+          "description": "Intégrer et afficher les recommandations personnalisées dans l'interface utilisateur du rapport d'audit.",
+          "status": "todo",
+          "dependencies": ["FEAT-003.3", "FEAT-003.4"],
+          "priority": "high",
+          "details": "Afficher les recommandations de manière claire et actionable dans le composant de rapport d'audit. Référencer la section 3.1 (FEAT-003) du project_prd.md.",
+          "testStrategy": "Vérifier que les recommandations s'affichent correctement et sont associées aux bonnes sections.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-003.6",
+          "title": "Tests Logique Audit Profil",
+          "description": "Écrire et exécuter des tests pour la logique d'analyse du profil et la génération de recommandations.",
+          "status": "todo",
+          "dependencies": ["FEAT-003.2", "FEAT-003.3"],
+          "priority": "high",
+          "details": "Écrire des tests unitaires pour les fonctions de calcul de score et de génération de recommandations. Référencer la section 6.1 du project_prd.md.",
+          "testStrategy": "Exécuter les tests et s'assurer qu'ils passent.",
+          "subtasks": []
+        }
+      ]
     },
     {
       "id": "FEAT-004",
@@ -50,7 +273,74 @@
       "priority": "high",
       "details": "Basé sur la section 3.1 (FEAT-004) et 3.2 (FEAT-004) du project_prd.md. Doit être créatif et pertinent.",
       "testStrategy": "Évaluer la qualité et la pertinence des brouillons générés pour divers thèmes.",
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "FEAT-004.1",
+          "title": "Créer UI Saisie Thème/Mots-clés",
+          "description": "Développer le composant frontend pour permettre à l'utilisateur de saisir le thème ou les mots-clés pour la génération de post.",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "high",
+          "details": "Créer un formulaire simple avec un champ texte ou une zone de texte. Appliquer les conventions de design (02_AI-DOCS/Conventions/design_conventions.md) et les principes de AI_Design_Agent_Optimization.md. Référencer la section 3.1 (FEAT-004) du project_prd.md.",
+          "testStrategy": "Vérifier le rendu du composant et la saisie de texte.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-004.2",
+          "title": "Implémenter Logique Frontend Génération Texte",
+          "description": "Implémenter la logique frontend pour envoyer la requête de génération de post à l'IA.",
+          "status": "todo",
+          "dependencies": ["FEAT-004.1"],
+          "priority": "high",
+          "details": "Récupérer les données du formulaire et envoyer une requête (API call) au backend/Edge Function responsable de l'interaction avec le modèle d'IA. Gérer les états de chargement. Référencer la section 3.1 (FEAT-004) du project_prd.md.",
+          "testStrategy": "Tester l'envoi de la requête avec différentes entrées.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-004.3",
+          "title": "Développer Logique Backend Génération Texte",
+          "description": "Développer la logique backend (Edge Function ou API) pour interagir avec le modèle d'IA et générer le post.",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "high",
+          "details": "Recevoir la requête frontend, appeler le modèle d'IA (via un MCP ou une API externe configurée selon la section 5.6 du project_prd.md), et retourner le brouillon de post généré. Gérer les erreurs de l'API IA. Référencer la section 3.1 (FEAT-004) du project_prd.md.",
+          "testStrategy": "Tester l'endpoint backend avec différentes entrées et vérifier la réponse de l'IA.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-004.4",
+          "title": "Afficher Brouillon Généré UI",
+          "description": "Afficher le brouillon de post généré par l'IA dans l'interface utilisateur.",
+          "status": "todo",
+          "dependencies": ["FEAT-004.2", "FEAT-004.3"],
+          "priority": "high",
+          "details": "Prendre la réponse du backend et afficher le texte du brouillon dans une zone de texte éditable ou un composant d'affichage. Référencer la section 3.1 (FEAT-004) du project_prd.md.",
+          "testStrategy": "Vérifier que le texte généré s'affiche correctement.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-004.5",
+          "title": "Créer UI Édition Brouillon",
+          "description": "Développer le composant UI pour permettre à l'utilisateur d'éditer le brouillon de post généré.",
+          "status": "todo",
+          "dependencies": ["FEAT-004.4"],
+          "priority": "high",
+          "details": "Utiliser une zone de texte ou un éditeur WYSIWYG simple pour permettre la modification du brouillon. Appliquer les conventions de design (02_AI-DOCS/Conventions/design_conventions.md) et les principes de AI_Design_Agent_Optimization.md. Référencer la section 3.1 (FEAT-004) du project_prd.md.",
+          "testStrategy": "Vérifier que le texte peut être modifié.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-004.6",
+          "title": "Tests Génération Texte",
+          "description": "Écrire et exécuter des tests pour le flux de génération de post texte.",
+          "status": "todo",
+          "dependencies": ["FEAT-004.4", "FEAT-004.5"],
+          "priority": "high",
+          "details": "Écrire des tests d'intégration couvrant l'envoi de la requête, la réception de la réponse et l'affichage/édition du brouillon. Référencer la section 6.1 du project_prd.md.",
+          "testStrategy": "Exécuter les tests et s'assurer qu'ils passent.",
+          "subtasks": []
+        }
+      ]
     },
     {
       "id": "FEAT-005",
@@ -61,7 +351,85 @@
       "priority": "medium",
       "details": "Basé sur la section 3.1 (FEAT-005) et 3.2 (FEAT-005) du project_prd.md. Doit être intelligent et pratique.",
       "testStrategy": "Tester la génération à partir de différents types de fichiers et de liens.",
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "FEAT-005.1",
+          "title": "Créer UI Téléchargement/Saisie Lien",
+          "description": "Développer le composant frontend pour permettre à l'utilisateur de télécharger un fichier ou de saisir un lien.",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "medium",
+          "details": "Créer une interface avec un bouton de téléchargement de fichier et un champ pour coller un lien. Appliquer les conventions de design (02_AI-DOCS/Conventions/design_conventions.md) et les principes de AI_Design_Agent_Optimization.md. Référencer la section 3.1 (FEAT-005) du project_prd.md.",
+          "testStrategy": "Vérifier le rendu du composant.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-005.2",
+          "title": "Implémenter Logique Frontend Fichier/Lien",
+          "description": "Implémenter la logique frontend pour gérer le fichier téléchargé ou le lien saisi.",
+          "status": "todo",
+          "dependencies": ["FEAT-005.1"],
+          "priority": "medium",
+          "details": "Gérer l'événement de téléchargement de fichier ou la soumission du lien. Envoyer le fichier ou le lien au backend. Gérer les états de chargement. Référencer la section 3.1 (FEAT-005) du project_prd.md.",
+          "testStrategy": "Tester le déclenchement de l'action lors du téléchargement ou de la soumission.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-005.3",
+          "title": "Développer Logique Backend Réception Fichier",
+          "description": "Développer la logique backend pour recevoir et stocker temporairement le fichier téléchargé.",
+          "status": "todo",
+          "dependencies": ["FEAT-005.2"],
+          "priority": "medium",
+          "details": "Créer un endpoint pour recevoir les fichiers. Utiliser Supabase Storage ou un autre mécanisme de stockage temporaire. Référencer la section 3.1 (FEAT-005) et 5.4 du project_prd.md.",
+          "testStrategy": "Tester l'upload de fichiers de différents types et tailles.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-005.4",
+          "title": "Développer Logique Backend Analyse Contenu",
+          "description": "Développer la logique backend pour analyser le contenu du fichier ou du lien.",
+          "status": "todo",
+          "dependencies": ["FEAT-005.3"],
+          "priority": "medium",
+          "details": "Utiliser des bibliothèques ou des services externes (potentiellement via MCPs, section 5.6 du project_prd.md) pour extraire le texte des documents, analyser les images (OCR, description), ou scraper le contenu des liens. Référencer la section 3.1 (FEAT-005) du project_prd.md.",
+          "testStrategy": "Tester l'analyse avec différents types de fichiers et de liens.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-005.5",
+          "title": "Développer Logique Backend Génération IA Fichier/Lien",
+          "description": "Développer la logique backend pour envoyer le contenu analysé à l'IA pour générer un brouillon de post.",
+          "status": "todo",
+          "dependencies": ["FEAT-005.4"],
+          "priority": "medium",
+          "details": "Prendre le texte extrait ou la description du contenu et l'envoyer au modèle d'IA (via le même mécanisme que FEAT-004.3) avec une instruction pour générer un post LinkedIn. Référencer la section 3.1 (FEAT-005) du project_prd.md.",
+          "testStrategy": "Tester l'appel à l'IA avec le contenu analysé.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-005.6",
+          "title": "Afficher Brouillon Généré Fichier/Lien UI",
+          "description": "Afficher le brouillon de post généré à partir du fichier/lien dans l'interface utilisateur.",
+          "status": "todo",
+          "dependencies": ["FEAT-005.5", "FEAT-004.4"],
+          "priority": "medium",
+          "details": "Réutiliser le composant d'affichage/édition de brouillon (FEAT-004.5) pour présenter le résultat de la génération basée sur fichier/lien. Référencer la section 3.1 (FEAT-005) du project_prd.md.",
+          "testStrategy": "Vérifier que le brouillon s'affiche correctement après génération.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-005.7",
+          "title": "Tests Génération Fichier/Lien",
+          "description": "Écrire et exécuter des tests pour le flux de génération de post à partir de fichier/lien.",
+          "status": "todo",
+          "dependencies": ["FEAT-005.6"],
+          "priority": "medium",
+          "details": "Écrire des tests d'intégration couvrant l'upload/saisie, l'analyse, l'appel IA et l'affichage du brouillon. Référencer la section 6.1 du project_prd.md.",
+          "testStrategy": "Exécuter les tests avec différents types de fichiers et liens.",
+          "subtasks": []
+        }
+      ]
     },
     {
       "id": "FEAT-006",
@@ -72,7 +440,63 @@
       "priority": "high",
       "details": "Basé sur la section 3.1 (FEAT-006) et 3.2 (FEAT-006) du project_prd.md. Doit être inspirant et varié.",
       "testStrategy": "Évaluer la diversité et la pertinence des idées générées pour différents thèmes.",
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "FEAT-006.1",
+          "title": "Créer UI Saisie Thème Idées",
+          "description": "Développer le composant frontend pour permettre à l'utilisateur de saisir le thème principal pour la génération d'idées de posts.",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "high",
+          "details": "Créer un champ de saisie pour le thème. Appliquer les conventions de design (02_AI-DOCS/Conventions/design_conventions.md) et les principes de AI_Design_Agent_Optimization.md. Référencer la section 3.1 (FEAT-006) du project_prd.md.",
+          "testStrategy": "Vérifier le rendu du composant.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-006.2",
+          "title": "Implémenter Logique Frontend Génération Idées",
+          "description": "Implémenter la logique frontend pour envoyer la requête de génération d'idées de posts à l'IA.",
+          "status": "todo",
+          "dependencies": ["FEAT-006.1"],
+          "priority": "high",
+          "details": "Récupérer le thème saisi et envoyer une requête au backend/Edge Function responsable de l'interaction avec le modèle d'IA. Gérer les états de chargement. Référencer la section 3.1 (FEAT-006) du project_prd.md.",
+          "testStrategy": "Tester l'envoi de la requête avec différents thèmes.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-006.3",
+          "title": "Développer Logique Backend Génération Idées",
+          "description": "Développer la logique backend (Edge Function ou API) pour interagir avec le modèle d'IA et générer des idées de posts.",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "high",
+          "details": "Recevoir la requête frontend, appeler le modèle d'IA (via un MCP ou une API externe) avec le thème et une instruction pour générer des idées variées. Retourner la liste d'idées. Gérer les erreurs. Référencer la section 3.1 (FEAT-006) et 5.6 du project_prd.md.",
+          "testStrategy": "Tester l'endpoint backend avec différents thèmes et vérifier la réponse de l'IA.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-006.4",
+          "title": "Afficher Liste Idées UI",
+          "description": "Afficher la liste d'idées de posts générées par l'IA dans l'interface utilisateur.",
+          "status": "todo",
+          "dependencies": ["FEAT-006.2", "FEAT-006.3"],
+          "priority": "high",
+          "details": "Prendre la réponse du backend et afficher les idées dans une liste ou un format similaire. Permettre la sélection d'une idée pour la développer. Référencer la section 3.1 (FEAT-006) du project_prd.md.",
+          "testStrategy": "Vérifier que la liste d'idées s'affiche correctement.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-006.5",
+          "title": "Tests Génération Idées",
+          "description": "Écrire et exécuter des tests pour le flux de génération d'idées de posts.",
+          "status": "todo",
+          "dependencies": ["FEAT-006.4"],
+          "priority": "high",
+          "details": "Écrire des tests d'intégration couvrant l'envoi de la requête, la réception de la réponse et l'affichage des idées. Référencer la section 6.1 du project_prd.md.",
+          "testStrategy": "Exécuter les tests et s'assurer qu'ils passent.",
+          "subtasks": []
+        }
+      ]
     },
     {
       "id": "FEAT-007",
@@ -83,7 +507,63 @@
       "priority": "high",
       "details": "Basé sur la section 3.1 (FEAT-007) et 3.2 (FEAT-007) du project_prd.md. Doit être utile et intelligent.",
       "testStrategy": "Comparer les versions optimisées avec l'original et évaluer les suggestions.",
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "FEAT-007.1",
+          "title": "Créer UI Saisie Post Optimisation",
+          "description": "Développer le composant frontend pour permettre à l'utilisateur de saisir ou coller le post à optimiser.",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "high",
+          "details": "Créer une zone de texte pour le post. Appliquer les conventions de design (02_AI-DOCS/Conventions/design_conventions.md) et les principes de AI_Design_Agent_Optimization.md. Référencer la section 3.1 (FEAT-007) du project_prd.md.",
+          "testStrategy": "Vérifier le rendu du composant et la saisie de texte.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-007.2",
+          "title": "Implémenter Logique Frontend Optimisation",
+          "description": "Implémenter la logique frontend pour envoyer le post à optimiser à l'IA.",
+          "status": "todo",
+          "dependencies": ["FEAT-007.1"],
+          "priority": "high",
+          "details": "Récupérer le texte du post et envoyer une requête au backend/Edge Function responsable de l'interaction avec le modèle d'IA. Gérer les états de chargement. Référencer la section 3.1 (FEAT-007) du project_prd.md.",
+          "testStrategy": "Tester l'envoi de la requête avec différents posts.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-007.3",
+          "title": "Développer Logique Backend Optimisation",
+          "description": "Développer la logique backend (Edge Function ou API) pour interagir avec le modèle d'IA et optimiser le post.",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "high",
+          "details": "Recevoir le post, appeler le modèle d'IA (via un MCP ou une API externe) avec une instruction pour analyser et proposer des versions optimisées. Retourner les suggestions. Gérer les erreurs. Référencer la section 3.1 (FEAT-007) et 5.6 du project_prd.md.",
+          "testStrategy": "Tester l'endpoint backend avec différents posts et vérifier les suggestions de l'IA.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-007.4",
+          "title": "Afficher Versions Optimisées UI",
+          "description": "Afficher les versions optimisées du post générées par l'IA dans l'interface utilisateur.",
+          "status": "todo",
+          "dependencies": ["FEAT-007.2", "FEAT-007.3"],
+          "priority": "high",
+          "details": "Prendre la réponse du backend et afficher les 3 versions optimisées de manière claire. Permettre à l'utilisateur de sélectionner une version. Référencer la section 3.1 (FEAT-007) du project_prd.md.",
+          "testStrategy": "Vérifier que les versions optimisées s'affichent correctement.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-007.5",
+          "title": "Tests Optimisation Posts",
+          "description": "Écrire et exécuter des tests pour le flux d'optimisation de posts.",
+          "status": "todo",
+          "dependencies": ["FEAT-007.4"],
+          "priority": "high",
+          "details": "Écrire des tests d'intégration couvrant l'envoi du post, la réception des suggestions et l'affichage. Référencer la section 6.1 du project_prd.md.",
+          "testStrategy": "Exécuter les tests et s'assurer qu'ils passent.",
+          "subtasks": []
+        }
+      ]
     },
     {
       "id": "FEAT-008",
@@ -94,7 +574,63 @@
       "priority": "high",
       "details": "Basé sur la section 3.1 (FEAT-008) et 3.2 (FEAT-008) du project_prd.md. Doit être accrocheur et basé sur les données.",
       "testStrategy": "Évaluer la pertinence et l'impact potentiel des accroches générées.",
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "FEAT-008.1",
+          "title": "Créer UI Saisie Post Accroches",
+          "description": "Développer le composant frontend pour permettre à l'utilisateur de saisir ou coller le post pour lequel générer des accroches.",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "high",
+          "details": "Créer une zone de texte pour le post. Appliquer les conventions de design (02_AI-DOCS/Conventions/design_conventions.md) et les principes de AI_Design_Agent_Optimization.md. Référencer la section 3.1 (FEAT-008) du project_prd.md.",
+          "testStrategy": "Vérifier le rendu du composant et la saisie de texte.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-008.2",
+          "title": "Implémenter Logique Frontend Accroches",
+          "description": "Implémenter la logique frontend pour envoyer le post à l'IA pour générer des accroches.",
+          "status": "todo",
+          "dependencies": ["FEAT-008.1"],
+          "priority": "high",
+          "details": "Récupérer le texte du post et envoyer une requête au backend/Edge Function responsable de l'interaction avec le modèle d'IA. Gérer les états de chargement. Référencer la section 3.1 (FEAT-008) du project_prd.md.",
+          "testStrategy": "Tester l'envoi de la requête avec différents posts.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-008.3",
+          "title": "Développer Logique Backend Accroches",
+          "description": "Développer la logique backend (Edge Function ou API) pour interagir avec le modèle d'IA et générer des accroches.",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "high",
+          "details": "Recevoir le post, appeler le modèle d'IA (via un MCP ou une API externe) avec une instruction pour générer des suggestions d'accroches. Retourner les suggestions. Gérer les erreurs. Référencer la section 3.1 (FEAT-008) et 5.6 du project_prd.md.",
+          "testStrategy": "Tester l'endpoint backend avec différents posts et vérifier les suggestions de l'IA.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-008.4",
+          "title": "Afficher Suggestions Accroches UI",
+          "description": "Afficher les suggestions d'accroches générées par l'IA dans l'interface utilisateur.",
+          "status": "todo",
+          "dependencies": ["FEAT-008.2", "FEAT-008.3"],
+          "priority": "high",
+          "details": "Prendre la réponse du backend et afficher les suggestions d'accroches. Permettre à l'utilisateur de copier une suggestion. Référencer la section 3.1 (FEAT-008) du project_prd.md.",
+          "testStrategy": "Vérifier que les suggestions s'affichent correctement.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-008.5",
+          "title": "Tests Génération Accroches",
+          "description": "Écrire et exécuter des tests pour le flux de génération d'accroches.",
+          "status": "todo",
+          "dependencies": ["FEAT-008.4"],
+          "priority": "high",
+          "details": "Écrire des tests d'intégration couvrant l'envoi du post, la réception des suggestions et l'affichage. Référencer la section 6.1 du project_prd.md.",
+          "testStrategy": "Exécuter les tests et s'assurer qu'ils passent.",
+          "subtasks": []
+        }
+      ]
     },
     {
       "id": "FEAT-009",
@@ -105,7 +641,74 @@
       "priority": "high",
       "details": "Basé sur la section 3.1 (FEAT-009) et 3.2 (FEAT-009) du project_prd.md. Doit être clair et organisé.",
       "testStrategy": "Vérifier l'affichage correct et la gestion des différents statuts de posts.",
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "FEAT-009.1",
+          "title": "Créer UI Tableau de Bord Posts",
+          "description": "Développer le composant frontend pour le tableau de bord affichant les posts de l'utilisateur.",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "high",
+          "details": "Créer une mise en page pour afficher les posts, potentiellement organisés par statut (brouillons, programmés, publiés). Appliquer les conventions de design (02_AI-DOCS/Conventions/design_conventions.md) et les principes de AI_Design_Agent_Optimization.md. Référencer la section 3.1 (FEAT-009) du project_prd.md.",
+          "testStrategy": "Vérifier le rendu du tableau de bord vide et avec des données de test.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-009.2",
+          "title": "Développer Logique Backend Stockage Posts",
+          "description": "Développer la logique backend pour stocker les brouillons et les posts programmés dans la base de données.",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "high",
+          "details": "Créer une table dans Supabase pour stocker les posts (contenu, statut, date de programmation, etc.). Implémenter les fonctions pour insérer et mettre à jour les posts. Référencer la section 3.1 (FEAT-009) et 5.5 du project_prd.md.",
+          "testStrategy": "Tester l'insertion et la mise à jour de posts dans la base de données.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-009.3",
+          "title": "Développer Logique Backend Récupération Posts",
+          "description": "Développer la logique backend pour récupérer les posts de l'utilisateur depuis la base de données.",
+          "status": "todo",
+          "dependencies": ["FEAT-009.2"],
+          "priority": "high",
+          "details": "Implémenter une fonction pour récupérer les posts associés à l'utilisateur connecté, avec des filtres par statut si nécessaire. Référencer la section 3.1 (FEAT-009) et 5.5 du project_prd.md.",
+          "testStrategy": "Tester la récupération de posts pour différents utilisateurs et statuts.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-009.4",
+          "title": "Implémenter Logique Frontend Affichage Posts",
+          "description": "Implémenter la logique frontend pour récupérer et afficher les posts dans le tableau de bord.",
+          "status": "todo",
+          "dependencies": ["FEAT-009.1", "FEAT-009.3"],
+          "priority": "high",
+          "details": "Appeler l'endpoint backend pour récupérer les posts et mettre à jour l'état du composant UI pour les afficher. Gérer les états de chargement et d'erreur. Référencer la section 3.1 (FEAT-009) du project_prd.md.",
+          "testStrategy": "Vérifier que les posts récupérés s'affichent correctement dans le tableau de bord.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-009.5",
+          "title": "Implémenter Actions Base Posts UI",
+          "description": "Ajouter les fonctionnalités de base (voir détails, supprimer) pour les posts dans le tableau de bord.",
+          "status": "todo",
+          "dependencies": ["FEAT-009.4"],
+          "priority": "high",
+          "details": "Ajouter des boutons ou des liens pour voir les détails d'un post (potentiellement rediriger vers l'interface d'édition, dépend de FEAT-004.5) et pour supprimer un post. Implémenter la logique frontend pour ces actions et les appels backend correspondants. Référencer la section 3.1 (FEAT-009) du project_prd.md.",
+          "testStrategy": "Tester la navigation vers les détails et la suppression de posts.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-009.6",
+          "title": "Tests Tableau de Bord Posts",
+          "description": "Écrire et exécuter des tests pour le tableau de bord des posts.",
+          "status": "todo",
+          "dependencies": ["FEAT-009.4", "FEAT-009.5"],
+          "priority": "high",
+          "details": "Écrire des tests d'intégration couvrant la récupération, l'affichage et les actions de base sur les posts. Référencer la section 6.1 du project_prd.md.",
+          "testStrategy": "Exécuter les tests et s'assurer qu'ils passent.",
+          "subtasks": []
+        }
+      ]
     },
     {
       "id": "FEAT-010",
@@ -116,7 +719,85 @@
       "priority": "high",
       "details": "Basé sur la section 3.1 (FEAT-010), 3.2 (FEAT-010) et le cas d'utilisation associé du project_prd.md. Doit être fiable et automatisé.",
       "testStrategy": "Tester la programmation et la publication effective des posts à l'heure prévue.",
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "FEAT-010.1",
+          "title": "Créer UI Sélection Date/Heure Programmation",
+          "description": "Développer le composant frontend pour permettre à l'utilisateur de choisir la date et l'heure de publication d'un post.",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "high",
+          "details": "Utiliser un sélecteur de date et un sélecteur d'heure. Appliquer les conventions de design (02_AI-DOCS/Conventions/design_conventions.md) et les principes de AI_Design_Agent_Optimization.md. Référencer la section 3.1 (FEAT-010) du project_prd.md.",
+          "testStrategy": "Vérifier le rendu du composant et la sélection de date/heure.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-010.2",
+          "title": "Implémenter Logique Frontend Programmation",
+          "description": "Implémenter la logique frontend pour envoyer le post et l'heure de programmation au backend.",
+          "status": "todo",
+          "dependencies": ["FEAT-010.1", "FEAT-009.2"],
+          "priority": "high",
+          "details": "Récupérer le contenu du post et la date/heure sélectionnée. Envoyer ces informations au backend pour stockage et planification. Gérer les états de chargement. Référencer la section 3.1 (FEAT-010) du project_prd.md.",
+          "testStrategy": "Tester l'envoi des données de programmation au backend.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-010.3",
+          "title": "Développer Logique Backend Stockage Programmation",
+          "description": "Développer la logique backend pour stocker le post programmé dans la base de données avec la date et l'heure de publication.",
+          "status": "todo",
+          "dependencies": ["FEAT-010.2", "FEAT-009.2"],
+          "priority": "high",
+          "details": "Mettre à jour la fonction de stockage des posts pour inclure la date et l'heure de programmation et définir le statut comme 'programmé'. Référencer la section 3.1 (FEAT-010) et 5.5 du project_prd.md.",
+          "testStrategy": "Vérifier que le post est stocké avec la date/heure correcte et le bon statut.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-010.4",
+          "title": "Implémenter Mécanisme Planification Publication",
+          "description": "Mettre en place un mécanisme pour déclencher la publication des posts programmés à l'heure spécifiée.",
+          "status": "todo",
+          "dependencies": ["FEAT-010.3"],
+          "priority": "high",
+          "details": "Utiliser une tâche planifiée (cron job), un webhook Supabase, ou un service similaire pour vérifier régulièrement les posts programmés et déclencher la publication. Référencer la section 3.1 (FEAT-010) et 5.4 du project_prd.md.",
+          "testStrategy": "Tester le déclenchement du mécanisme à l'heure prévue.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-010.5",
+          "title": "Développer Logique Backend Publication LinkedIn",
+          "description": "Développer la logique backend pour publier un post sur LinkedIn via l'API.",
+          "status": "todo",
+          "dependencies": ["FEAT-010.4", "FEAT-002.5"],
+          "priority": "high",
+          "details": "Utiliser l'API LinkedIn (section 5.6 du project_prd.md) pour publier le contenu du post. Gérer les différents types de contenu (texte, image si applicable). Référencer la section 3.1 (FEAT-010) du project_prd.md.",
+          "testStrategy": "Tester la publication d'un post simple sur LinkedIn via l'endpoint backend.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-010.6",
+          "title": "Gérer Réponses API LinkedIn Publication",
+          "description": "Gérer les réponses de l'API LinkedIn après une tentative de publication et mettre à jour le statut du post.",
+          "status": "todo",
+          "dependencies": ["FEAT-010.5", "FEAT-009.2"],
+          "priority": "high",
+          "details": "Interpréter la réponse de l'API (succès, échec, erreurs) et mettre à jour le statut du post dans la base de données ('publié', 'échec'). Référencer la section 3.1 (FEAT-010) et 5.5 du project_prd.md.",
+          "testStrategy": "Tester la mise à jour du statut du post après publication réussie et échec.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-010.7",
+          "title": "Tests Programmation et Publication",
+          "description": "Écrire et exécuter des tests pour le flux complet de programmation et de publication de posts.",
+          "status": "todo",
+          "dependencies": ["FEAT-010.6"],
+          "priority": "high",
+          "details": "Écrire des tests d'intégration couvrant la sélection de date/heure, l'envoi, le stockage, le déclenchement planifié et la publication effective sur LinkedIn. Référencer la section 6.1 du project_prd.md.",
+          "testStrategy": "Exécuter les tests et s'assurer qu'ils passent.",
+          "subtasks": []
+        }
+      ]
     },
     {
       "id": "FEAT-011",
@@ -127,7 +808,63 @@
       "priority": "high",
       "details": "Basé sur la section 3.1 (FEAT-011) et 3.2 (FEAT-011) du project_prd.md. Doit être transparent et informatif.",
       "testStrategy": "Vérifier l'exactitude des métriques affichées par rapport aux données LinkedIn.",
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "FEAT-011.1",
+          "title": "Rechercher Doc API LinkedIn Statistiques",
+          "description": "Rechercher et comprendre la documentation officielle de l'API LinkedIn pour accéder aux statistiques de posts.",
+          "status": "todo",
+          "dependencies": ["FEAT-002.1"],
+          "priority": "high",
+          "details": "Identifier les endpoints et les permissions nécessaires pour récupérer les impressions, interactions, etc. Référencer la section 3.1 (FEAT-011) et 5.6 du project_prd.md.",
+          "testStrategy": "Compiler un résumé des endpoints et des données disponibles.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-011.2",
+          "title": "Développer Logique Backend Récupération Statistiques",
+          "description": "Développer la logique backend pour récupérer les statistiques d'un post via l'API LinkedIn.",
+          "status": "todo",
+          "dependencies": ["FEAT-011.1", "FEAT-002.5"],
+          "priority": "high",
+          "details": "Implémenter une fonction pour appeler l'API LinkedIn avec l'ID du post et récupérer les métriques. Gérer les erreurs. Référencer la section 3.1 (FEAT-011) et 5.6 du project_prd.md.",
+          "testStrategy": "Tester l'endpoint backend avec un ID de post valide et vérifier les données retournées.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-011.3",
+          "title": "Créer UI Affichage Statistiques",
+          "description": "Développer le composant frontend pour afficher les statistiques d'un post.",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "high",
+          "details": "Créer un composant pour présenter les métriques clés (impressions, likes, commentaires, partages, taux d'engagement) de manière claire et visuelle. Appliquer les conventions de design (02_AI-DOCS/Conventions/design_conventions.md) et les principes de AI_Design_Agent_Optimization.md. Référencer la section 3.1 (FEAT-011) du project_prd.md.",
+          "testStrategy": "Vérifier le rendu du composant avec différentes données de statistiques.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-011.4",
+          "title": "Implémenter Logique Frontend Affichage Statistiques",
+          "description": "Implémenter la logique frontend pour récupérer et afficher les statistiques dans l'UI.",
+          "status": "todo",
+          "dependencies": ["FEAT-011.2", "FEAT-011.3", "FEAT-009.4"],
+          "priority": "high",
+          "details": "Intégrer l'appel backend dans le tableau de bord des posts (FEAT-009) ou une page de détail de post pour afficher les statistiques associées. Gérer les états de chargement et d'erreur. Référencer la section 3.1 (FEAT-011) du project_prd.md.",
+          "testStrategy": "Vérifier que les statistiques s'affichent correctement pour les posts publiés.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-011.5",
+          "title": "Tests Statistiques Performance",
+          "description": "Écrire et exécuter des tests pour le flux de statistiques de performance.",
+          "status": "todo",
+          "dependencies": ["FEAT-011.4"],
+          "priority": "high",
+          "details": "Écrire des tests d'intégration couvrant la récupération des données via le backend et l'affichage dans l'interface utilisateur. Référencer la section 6.1 du project_prd.md.",
+          "testStrategy": "Exécuter les tests et s'assurer qu'ils passent.",
+          "subtasks": []
+        }
+      ]
     },
     {
       "id": "FEAT-012",
@@ -138,7 +875,63 @@
       "priority": "high",
       "details": "Basé sur la section 3.1 (FEAT-012) et 3.2 (FEAT-012) du project_prd.md. Doit être intelligent et actionable.",
       "testStrategy": "Évaluer la pertinence et l'utilité des conseils personnalisés.",
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "FEAT-012.1",
+          "title": "Développer Logique Backend Analyse Données Conseils",
+          "description": "Développer la logique backend pour analyser les données du profil utilisateur et les statistiques de posts pour identifier les axes d'amélioration.",
+          "status": "todo",
+          "dependencies": ["FEAT-003.2", "FEAT-011.2", "FEAT-015"],
+          "priority": "high",
+          "details": "Combiner les données d'audit de profil, les statistiques de performance des posts et les informations utilisateur pour une analyse complète. Référencer la section 3.1 (FEAT-012) du project_prd.md.",
+          "testStrategy": "Tester la logique d'analyse avec différents jeux de données utilisateur et de posts.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-012.2",
+          "title": "Développer Logique Backend Génération Conseils",
+          "description": "Développer la logique backend pour générer des conseils personnalisés basés sur l'analyse.",
+          "status": "todo",
+          "dependencies": ["FEAT-012.1"],
+          "priority": "high",
+          "details": "Créer des règles ou utiliser un modèle pour proposer des recommandations concrètes pour améliorer le profil et la stratégie de contenu. Référencer la section 3.1 (FEAT-012) du project_prd.md.",
+          "testStrategy": "Évaluer la pertinence et l'utilité des conseils générés.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-012.3",
+          "title": "Créer UI Affichage Conseils Personnalisés",
+          "description": "Développer le composant frontend pour afficher les conseils personnalisés.",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "high",
+          "details": "Créer une section ou une page dédiée pour présenter les conseils de manière claire et actionable. Appliquer les conventions de design (02_AI-DOCS/Conventions/design_conventions.md) et les principes de AI_Design_Agent_Optimization.md. Référencer la section 3.1 (FEAT-012) du project_prd.md.",
+          "testStrategy": "Vérifier le rendu du composant avec différentes données de conseils.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-012.4",
+          "title": "Implémenter Logique Frontend Affichage Conseils",
+          "description": "Implémenter la logique frontend pour récupérer et afficher les conseils personnalisés.",
+          "status": "todo",
+          "dependencies": ["FEAT-012.2", "FEAT-012.3"],
+          "priority": "high",
+          "details": "Appeler l'endpoint backend pour récupérer les conseils et mettre à jour l'état du composant UI pour les afficher. Gérer les états de chargement et d'erreur. Référencer la section 3.1 (FEAT-012) du project_prd.md.",
+          "testStrategy": "Vérifier que les conseils s'affichent correctement dans l'interface.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-012.5",
+          "title": "Tests Conseils Personnalisés",
+          "description": "Écrire et exécuter des tests pour le flux de conseils personnalisés.",
+          "status": "todo",
+          "dependencies": ["FEAT-012.4"],
+          "priority": "high",
+          "details": "Écrire des tests d'intégration couvrant l'analyse des données, la génération des conseils et l'affichage dans l'interface utilisateur. Référencer la section 6.1 du project_prd.md.",
+          "testStrategy": "Exécuter les tests et s'assurer qu'ils passent.",
+          "subtasks": []
+        }
+      ]
     },
     {
       "id": "FEAT-013",
@@ -149,7 +942,85 @@
       "priority": "medium",
       "details": "Basé sur la section 3.1 (FEAT-013) et 3.2 (FEAT-013) du project_prd.md. Doit être flexible et efficace.",
       "testStrategy": "Tester l'ajout, la gestion et la commutation entre plusieurs sous-comptes.",
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "FEAT-013.1",
+          "title": "Modifier Modèle Données Sous-Comptes",
+          "description": "Modifier le modèle de données utilisateur dans Supabase pour associer plusieurs profils LinkedIn à un seul utilisateur Linked-Pedia.",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "medium",
+          "details": "Ajouter une nouvelle table ou modifier la table utilisateur existante pour stocker les informations de chaque sous-compte lié (ID LinkedIn, tokens, etc.). Référencer la section 3.1 (FEAT-013) et 5.5 du project_prd.md.",
+          "testStrategy": "Vérifier la structure de la base de données modifiée.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-013.2",
+          "title": "Adapter Flux Liaison Sous-Comptes",
+          "description": "Adapter le flux de liaison de compte LinkedIn (FEAT-002) pour permettre l'ajout de sous-comptes.",
+          "status": "todo",
+          "dependencies": ["FEAT-013.1", "FEAT-002.3"],
+          "priority": "medium",
+          "details": "Modifier le flux OAuth pour gérer l'ajout d'un nouveau compte LinkedIn sous un utilisateur existant. Référencer la section 3.1 (FEAT-013) et 5.6 du project_prd.md.",
+          "testStrategy": "Tester l'ajout d'un deuxième et d'un troisième compte LinkedIn.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-013.3",
+          "title": "Développer Logique Backend Gestion Tokens Sous-Comptes",
+          "description": "Développer la logique backend pour gérer les tokens d'accès et de rafraîchissement pour plusieurs sous-comptes.",
+          "status": "todo",
+          "dependencies": ["FEAT-013.1", "FEAT-013.2"],
+          "priority": "medium",
+          "details": "Stocker et récupérer les tokens correctement en fonction du sous-compte actif. Gérer le renouvellement pour chaque compte. Référencer la section 3.1 (FEAT-013), 4.3 et 5.5 du project_prd.md.",
+          "testStrategy": "Tester le stockage et la récupération des tokens pour différents sous-comptes.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-013.4",
+          "title": "Créer UI Sélection/Bascule Sous-Comptes",
+          "description": "Développer le composant frontend pour permettre à l'utilisateur de sélectionner le sous-compte actif.",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "medium",
+          "details": "Créer un sélecteur (dropdown, liste) dans l'interface utilisateur pour afficher les sous-comptes liés et permettre de basculer entre eux. Appliquer les conventions de design (02_AI-DOCS/Conventions/design_conventions.md) et les principes de AI_Design_Agent_Optimization.md. Référencer la section 3.1 (FEAT-013) du project_prd.md.",
+          "testStrategy": "Vérifier le rendu du sélecteur avec plusieurs sous-comptes.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-013.5",
+          "title": "Implémenter Logique Frontend Bascule Contexte",
+          "description": "Implémenter la logique frontend pour changer le contexte de l'application en fonction du sous-compte sélectionné.",
+          "status": "todo",
+          "dependencies": ["FEAT-013.4"],
+          "priority": "medium",
+          "details": "Stocker l'ID du sous-compte actif (par exemple, dans le state global ou le local storage) et s'assurer que les requêtes backend utilisent cet ID. Référencer la section 3.1 (FEAT-013) du project_prd.md.",
+          "testStrategy": "Tester la bascule entre les sous-comptes et vérifier que les données affichées correspondent au compte actif.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-013.6",
+          "title": "Adapter Appels Backend Sous-Comptes",
+          "description": "Modifier les appels backend existants pour qu'ils opèrent sur le sous-compte actif.",
+          "status": "todo",
+          "dependencies": ["FEAT-013.3", "FEAT-013.5"],
+          "priority": "medium",
+          "details": "S'assurer que les fonctions backend (récupération profil, publication, statistiques, etc.) utilisent le token et l'ID du sous-compte sélectionné par l'utilisateur. Référencer la section 3.1 (FEAT-013) du project_prd.md.",
+          "testStrategy": "Tester les fonctionnalités principales (génération, publication, statistiques) pour chaque sous-compte.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-013.7",
+          "title": "Tests Gestion Sous-Comptes",
+          "description": "Écrire et exécuter des tests pour la gestion et la bascule des sous-comptes.",
+          "status": "todo",
+          "dependencies": ["FEAT-013.5", "FEAT-013.6"],
+          "priority": "medium",
+          "details": "Écrire des tests d'intégration couvrant l'ajout, la suppression, la bascule et le fonctionnement des fonctionnalités pour plusieurs sous-comptes. Référencer la section 6.1 du project_prd.md.",
+          "testStrategy": "Exécuter les tests et s'assurer qu'ils passent.",
+          "subtasks": []
+        }
+      ]
     },
     {
       "id": "FEAT-014",
@@ -160,7 +1031,74 @@
       "priority": "medium",
       "details": "Basé sur la section 3.1 (FEAT-014) et 3.2 (FEAT-014) du project_prd.md. Doit être pédagogique et rassurant.",
       "testStrategy": "Tester le flux de l'assistant pour les nouvelles fonctionnalités implémentées.",
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "FEAT-014.1",
+          "title": "Identifier Points Assistance Clés",
+          "description": "Analyser le parcours utilisateur pour identifier les moments où le mode assistant serait le plus utile (onboarding, première utilisation des fonctionnalités principales).",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "medium",
+          "details": "Cartographier les flux utilisateurs clés (inscription, liaison LinkedIn, génération post, audit profil) et identifier les étapes complexes ou nouvelles pour un débutant. Référencer la section 3.1 (FEAT-014) du project_prd.md.",
+          "testStrategy": "Valider les points identifiés avec les personas utilisateurs.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-014.2",
+          "title": "Rédiger Contenu Guides Assistant",
+          "description": "Rédiger le texte des guides pas à pas, des infobulles et des messages pour le mode assistant.",
+          "status": "todo",
+          "dependencies": ["FEAT-014.1"],
+          "priority": "medium",
+          "details": "Créer un contenu clair, concis et utile pour chaque point d'assistance identifié. Adopter un ton pédagogique et rassurant. Référencer la section 3.1 (FEAT-014) du project_prd.md.",
+          "testStrategy": "Faire relire le contenu par un autre agent ou un utilisateur test.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-014.3",
+          "title": "Créer Composants UI Mode Assistant",
+          "description": "Développer les composants frontend nécessaires pour afficher le mode assistant (superpositions, pop-ups, infobulles).",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "medium",
+          "details": "Créer des composants UI non intrusifs et visuellement distincts pour guider l'utilisateur. Appliquer les conventions de design (02_AI-DOCS/Conventions/design_conventions.md) et les principes de AI_Design_Agent_Optimization.md. Référencer la section 3.1 (FEAT-014) du project_prd.md.",
+          "testStrategy": "Vérifier le rendu des composants sur différentes tailles d'écran.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-014.4",
+          "title": "Implémenter Logique Frontend Flux Assistant",
+          "description": "Implémenter la logique frontend pour contrôler l'affichage séquentiel des guides et suivre la progression de l'utilisateur dans le mode assistant.",
+          "status": "todo",
+          "dependencies": ["FEAT-014.3"],
+          "priority": "medium",
+          "details": "Gérer l'état de l'assistant (étape actuelle, étapes complétées). Afficher le contenu pertinent (FEAT-014.2) au bon moment. Permettre à l'utilisateur de passer à l'étape suivante ou de fermer l'assistant. Référencer la section 3.1 (FEAT-014) du project_prd.md.",
+          "testStrategy": "Tester le flux pas à pas de l'assistant pour les parcours clés.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-014.5",
+          "title": "Implémenter Logique Activer/Désactiver Assistant",
+          "description": "Ajouter une option pour permettre à l'utilisateur d'activer ou de désactiver le mode assistant.",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "medium",
+          "details": "Ajouter un bouton ou un paramètre dans les réglages utilisateur pour contrôler la visibilité de l'assistant. Stocker la préférence de l'utilisateur (par exemple, dans le local storage ou la base de données). Référencer la section 3.1 (FEAT-014) du project_prd.md.",
+          "testStrategy": "Tester l'activation et la désactivation du mode assistant.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-014.6",
+          "title": "Tests Mode Assistant",
+          "description": "Écrire et exécuter des tests pour le fonctionnement du mode assistant.",
+          "status": "todo",
+          "dependencies": ["FEAT-014.4", "FEAT-014.5"],
+          "priority": "medium",
+          "details": "Écrire des tests d'intégration couvrant le flux de l'assistant, l'affichage des composants et la gestion de l'état activé/désactivé. Référencer la section 6.1 du project_prd.md.",
+          "testStrategy": "Exécuter les tests et s'assurer qu'ils passent.",
+          "subtasks": []
+        }
+      ]
     },
     {
       "id": "FEAT-015",
