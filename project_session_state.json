@@ -6,7 +6,7 @@
   "prdDocumentPath": "project_prd.md",
   "tasksDocumentPath": "tasks/tasks.json",
   "currentWorkflowPhase": "taskManagement",
-  "lastCompletedStep": "specsAndDocsCreated",
+  "lastCompletedStep": "epicsCreated",
   "pendingAction": {
     "mcpServer": null,
     "toolName": null,
@@ -24,5 +24,22 @@
     "errorMessage": null,
     "errorTimestamp": null,
     "recoverySuggestion": null
+  },
+  "taskStatuses": {
+    "FEAT-001": "todo",
+    "FEAT-002": "todo",
+    "FEAT-003": "todo",
+    "FEAT-004": "todo",
+    "FEAT-005": "todo",
+    "FEAT-006": "todo",
+    "FEAT-007": "todo",
+    "FEAT-008": "todo",
+    "FEAT-009": "todo",
+    "FEAT-010": "todo",
+    "FEAT-011": "todo",
+    "FEAT-012": "todo",
+    "FEAT-013": "todo",
+    "FEAT-014": "todo",
+    "FEAT-015": "todo"
   }
 }
