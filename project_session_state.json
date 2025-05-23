@@ -5,8 +5,8 @@
   "projectObjective": "Développer une application web Next.js 15 nommée Linked-Pedia pour aider les professionnels à optimiser leur présence sur LinkedIn grâce à la génération, l'édition, l'organisation et l'analyse de posts, ainsi qu'un audit de profil.",
   "prdDocumentPath": "project_prd.md",
   "tasksDocumentPath": "tasks/tasks.json",
-  "currentWorkflowPhase": "taskManagement",
-  "lastCompletedStep": "epicFEAT-014Decomposed",
+  "currentWorkflowPhase": "readmeGeneration",
+  "lastCompletedStep": "taskPrioritiesConfirmed",
   "pendingAction": {
     "mcpServer": null,
     "toolName": null,
@@ -124,6 +124,13 @@
     "FEAT-014.4": "todo",
     "FEAT-014.5": "todo",
     "FEAT-014.6": "todo",
-    "FEAT-015": "todo"
+    "FEAT-015": "todo",
+    "FEAT-015.1": "todo",
+    "FEAT-015.2": "todo",
+    "FEAT-015.3": "todo",
+    "FEAT-015.4": "todo",
+    "FEAT-015.5": "todo",
+    "FEAT-015.6": "todo",
+    "FEAT-015.7": "todo"
   }
 }

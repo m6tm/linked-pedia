@@ -1109,7 +1109,85 @@
       "priority": "high",
       "details": "Basé sur la section 3.1 (FEAT-015) et 3.2 (FEAT-015) du project_prd.md. Doit être personnalisé et pertinent.",
       "testStrategy": "Vérifier l'enregistrement et l'utilisation des informations utilisateur pour la personnalisation.",
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "FEAT-015.1",
+          "title": "Modifier Modèle Données Profil Utilisateur",
+          "description": "Modifier le modèle de données utilisateur dans Supabase pour inclure des champs pour les informations supplémentaires (activité, préférences, objectifs).",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "high",
+          "details": "Ajouter les colonnes nécessaires à la table utilisateur ou créer une table de profil liée. Référencer la section 3.1 (FEAT-015) et 5.5 du project_prd.md.",
+          "testStrategy": "Vérifier la structure de la base de données modifiée.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-015.2",
+          "title": "Créer UI Formulaire Profil Utilisateur",
+          "description": "Développer le composant frontend pour le formulaire de saisie des informations utilisateur.",
+          "status": "todo",
+          "dependencies": [],
+          "priority": "high",
+          "details": "Créer un formulaire avec les champs nécessaires (texte, sélecteurs, etc.). Appliquer les conventions de design (02_AI-DOCS/Conventions/design_conventions.md) et les principes de AI_Design_Agent_Optimization.md. Référencer la section 3.1 (FEAT-015) du project_prd.md.",
+          "testStrategy": "Vérifier le rendu du formulaire.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-015.3",
+          "title": "Implémenter Logique Frontend Enregistrement Profil",
+          "description": "Implémenter la logique frontend pour envoyer les données du formulaire de profil au backend.",
+          "status": "todo",
+          "dependencies": ["FEAT-015.2"],
+          "priority": "high",
+          "details": "Récupérer les données du formulaire et envoyer une requête (API call) au backend pour enregistrement. Gérer les états de chargement et d'erreur. Référencer la section 3.1 (FEAT-015) du project_prd.md.",
+          "testStrategy": "Tester l'envoi des données de profil au backend.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-015.4",
+          "title": "Développer Logique Backend Enregistrement Profil",
+          "description": "Développer la logique backend pour recevoir et enregistrer les informations du profil utilisateur dans la base de données.",
+          "status": "todo",
+          "dependencies": ["FEAT-015.1", "FEAT-015.3"],
+          "priority": "high",
+          "details": "Créer un endpoint pour recevoir les données. Utiliser le client Supabase pour insérer ou mettre à jour les données dans la table appropriée. Gérer les erreurs. Référencer la section 3.1 (FEAT-015) et 5.5 du project_prd.md.",
+          "testStrategy": "Tester l'enregistrement des données de profil dans la base de données.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-015.5",
+          "title": "Adapter Logiques IA avec Données Profil",
+          "description": "Modifier les logiques backend des fonctionnalités IA (génération, optimisation, conseils) pour utiliser les informations du profil utilisateur pour une meilleure personnalisation.",
+          "status": "todo",
+          "dependencies": ["FEAT-015.4", "FEAT-004.3", "FEAT-005.5", "FEAT-006.3", "FEAT-007.3", "FEAT-008.3", "FEAT-012.2"],
+          "priority": "high",
+          "details": "Récupérer les données du profil utilisateur dans les fonctions backend concernées et les inclure dans les prompts ou les logiques d'analyse pour personnaliser les résultats de l'IA. Référencer la section 3.1 (FEAT-015) du project_prd.md.",
+          "testStrategy": "Tester l'impact des données de profil sur les résultats générés par l'IA.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-015.6",
+          "title": "Implémenter Logique Frontend Affichage Profil",
+          "description": "Implémenter la logique frontend pour récupérer et afficher les informations du profil utilisateur existantes.",
+          "status": "todo",
+          "dependencies": ["FEAT-015.4", "FEAT-015.2"],
+          "priority": "high",
+          "details": "Lors du chargement de la page de profil, appeler un endpoint backend pour récupérer les données utilisateur et pré-remplir le formulaire. Gérer les états de chargement et d'erreur. Référencer la section 3.1 (FEAT-015) du project_prd.md.",
+          "testStrategy": "Vérifier que les informations de profil existantes s'affichent correctement.",
+          "subtasks": []
+        },
+        {
+          "id": "FEAT-015.7",
+          "title": "Tests Gestion Profil Utilisateur",
+          "description": "Écrire et exécuter des tests pour le flux complet de gestion du profil utilisateur.",
+          "status": "todo",
+          "dependencies": ["FEAT-015.4", "FEAT-015.5", "FEAT-015.6"],
+          "priority": "high",
+          "details": "Écrire des tests d'intégration couvrant la saisie, l'enregistrement, la récupération et l'utilisation des données de profil par l'IA. Référencer la section 6.1 du project_prd.md.",
+          "testStrategy": "Exécuter les tests et s'assurer qu'ils passent.",
+          "subtasks": []
+        }
+      ]
     }
   ]
 }
