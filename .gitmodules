@@ -1,0 +1,3 @@
+[submodule "linked-pedia"]
+	path = linked-pedia
+	url = git@github.com:m6tm/linked-pedia-app.git
