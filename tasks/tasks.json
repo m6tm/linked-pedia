@@ -193,7 +193,7 @@
       "status": "todo",
       "dependencies": ["FEAT-002"],
       "priority": "high",
-      "details": "Basé sur la section 3.1 (FEAT-003), 3.2 (FEAT-003) et le cas d'utilisation associé du project_prd.md. Doit être insightful et actionable.",
+      "details": "Basé sur la section 3.1 (FEAT-003) et 3.2 (FEAT-003) du project_prd.md. Doit être insightful et actionable.",
       "testStrategy": "Vérifier la pertinence de l'analyse et des recommandations pour différents profils.",
       "subtasks": [
         {
