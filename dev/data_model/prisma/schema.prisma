@@ -1,0 +1,167 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider        = "prisma-client-js"
+    previewFeatures = ["multiSchema"]
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+    // Supabase uses the "auth" schema for its built-in users table
+    schemas  = ["public", "auth"]
+}
+
+// Supabase Auth User table (read-only for relations)
+// Managed by Supabase Auth, do not modify directly via Prisma migrations
+model AuthUser {
+    id         String   @id @db.Uuid
+    email      String   @unique
+    // encrypted_password String? // Not needed for relations
+    created_at DateTime @db.Timestamptz(6)
+    updated_at DateTime @db.Timestamptz(6)
+
+    // Relation to public.users
+    publicUser PublicUser?
+
+    @@map("users") // Map to auth.users table
+    @@schema("auth")
+}
+
+model PublicUser {
+    id                      String   @id @db.Uuid
+    email                   String   @unique @db.Text
+    created_at              DateTime @default(now()) @db.Timestamptz(6)
+    updated_at              DateTime @default(now()) @db.Timestamptz(6)
+    preferences             Json     @default("{}")
+    objectives              Json     @default("{}")
+    activity_info           Json     @default("{}")
+    linkedin_account_linked Boolean  @default(false)
+    assistant_status        Json     @default("{}")
+
+    // Relation to auth.users
+    auth_user AuthUser @relation(fields: [id], references: [id])
+
+    // Relations to other tables
+    sub_accounts      SubAccount[]
+    linkedin_accounts LinkedinAccount[]
+    posts             Post[]
+    profile_audits    ProfileAudit[]
+
+    @@map("users") // Map to public.users table
+    @@schema("public")
+}
+
+model SubAccount {
+    id         String   @id @db.Uuid
+    user_id    String   @db.Uuid
+    name       String
+    created_at DateTime @default(now()) @db.Timestamptz(6)
+    updated_at DateTime @default(now()) @db.Timestamptz(6)
+
+    // Relations
+    user              PublicUser        @relation(fields: [user_id], references: [id])
+    linkedin_accounts LinkedinAccount[]
+
+    @@map("sub_accounts")
+    @@schema("public")
+}
+
+model LinkedinAccount {
+    id                       String    @id @db.Uuid
+    user_id                  String    @db.Uuid
+    sub_account_id           String?   @db.Uuid // Optional FK to SubAccount
+    linkedin_profile_id      String    @unique @db.Text
+    access_token             String    @db.Text // Should be encrypted at rest
+    refresh_token            String?   @db.Text // Should be encrypted at rest
+    expires_at               DateTime? @db.Timestamptz(6)
+    refresh_token_expires_at DateTime? @db.Timestamptz(6)
+    scopes                   String[]  @db.Text
+    created_at               DateTime  @default(now()) @db.Timestamptz(6)
+    updated_at               DateTime  @default(now()) @db.Timestamptz(6)
+    is_primary               Boolean   @default(false)
+
+    // Relations
+    user           PublicUser     @relation(fields: [user_id], references: [id])
+    sub_account    SubAccount?    @relation(fields: [sub_account_id], references: [id])
+    posts          Post[]
+    profile_audits ProfileAudit[]
+
+    @@map("linkedin_accounts")
+    @@schema("public")
+}
+
+model Post {
+    id                  String     @id @db.Uuid
+    user_id             String     @db.Uuid
+    linkedin_account_id String     @db.Uuid
+    content             String     @db.Text
+    status              PostStatus // 'brouillon', 'programmé', 'publié', 'échec'
+    created_at          DateTime   @default(now()) @db.Timestamptz(6)
+    updated_at          DateTime   @default(now()) @db.Timestamptz(6)
+    scheduled_date      DateTime?  @db.Timestamptz(6)
+    published_date      DateTime?  @db.Timestamptz(6)
+    linkedin_post_id    String?    @db.Text // Optional after publication
+    metadata            Json       @default("{}")
+
+    // Relations
+    user             PublicUser      @relation(fields: [user_id], references: [id])
+    linkedin_account LinkedinAccount @relation(fields: [linkedin_account_id], references: [id])
+    post_analytics   PostAnalytics[]
+
+    @@map("posts")
+    @@schema("public")
+}
+
+model ProfileAudit {
+    id                  String              @id @db.Uuid
+    user_id             String              @db.Uuid
+    linkedin_account_id String              @db.Uuid
+    audit_date          DateTime            @default(now()) @db.Timestamptz(6)
+    linkedin_ssi_score  Int?
+    calculated_score    Int?
+    sections_scores     Json?
+    recommendations     Json?
+    raw_profile_data    Json? // Consider privacy implications
+    status              ProfileAuditStatus? // 'completed', 'failed'
+
+    // Relations
+    user             PublicUser      @relation(fields: [user_id], references: [id])
+    linkedin_account LinkedinAccount @relation(fields: [linkedin_account_id], references: [id])
+
+    @@map("profile_audits")
+    @@schema("public")
+}
+
+model PostAnalytics {
+    id           String   @id @db.Uuid
+    post_id      String   @db.Uuid
+    impressions  Int      @default(0)
+    likes        Int      @default(0)
+    comments     Int      @default(0)
+    shares       Int      @default(0)
+    retrieved_at DateTime @default(now()) @db.Timestamptz(6)
+
+    // Relations
+    post Post @relation(fields: [post_id], references: [id])
+
+    @@map("post_analytics")
+    @@schema("public")
+}
+
+enum PostStatus {
+    BROUILLON
+    PROGRAMME
+    PUBLIE
+    ECHEC
+
+    @@schema("public")
+}
+
+enum ProfileAuditStatus {
+    completed
+    failed
+
+    @@schema("public")
+}
