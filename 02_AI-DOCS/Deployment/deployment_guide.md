@@ -16,23 +16,23 @@
 
 ```mermaid
 flowchart TD
-    A[Utilisateur] --> B(Navigateur Web);
+    A[Utilisateur] --> B[Navigateur Web];
     B --> C[Frontend Next.js 15];
     C --> |Appels API| D[Supabase Edge Functions];
     C --> |SDK Auth| E[Supabase Auth];
-    C --> |SDK DB| F[Supabase Database (PostgreSQL)];
+    C --> |SDK DB| F[Supabase Database PostgreSQL];
     C --> |SDK Storage| G[Supabase Storage];
     D --> |Requêtes DB| F;
     D --> |Appels API| H[API LinkedIn];
-    D --> |Appels API/MCP| I[Services IA (Génération, Optimisation, Tendances)];
-    D --> |Appels API/MCP| J[Autres Services Tiers/MCPs];
+    D --> |Appels API/MCP| I[Services IA - Generation, Optimisation, Tendances];
+    D --> |Appels API/MCP| J[Autres Services Tiers - MCPs];
     E --> F;
 
-    subgraph Backend (Supabase)
+    subgraph Backend_Supabase
         D; E; F; G
     end
 
-    subgraph Services Externes
+    subgraph Services_Externes
         H; I; J
     end
 

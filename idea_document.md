@@ -11,35 +11,27 @@ _Purpose: Capture the essence of the project for Sections 1.2 and 3.1 of the PRD
 
 ### 1. Project Working Title
 
-```
 Linked-Pedia
-```
 
 **Example:** "Neighborhood Carpooling App"
 
 ### 2. The Idea in a Few Words (Pitch/Central Concept)
 
-```
 Une application web Next.js 15 pour aider les professionnels à optimiser leur présence sur LinkedIn grâce à des outils de création, d'édition, d'organisation et d'analyse de posts, ainsi qu'un audit de profil personnalisé.
-```
 
 **Example:** "A mobile application to facilitate spontaneous and local carpooling between neighbors for short trips (school, shopping, activities)."
 
 ### 3. Main Problem this Project Solves
 
-```
 Les professionnels ont du mal à créer du contenu LinkedIn pertinent et engageant de manière efficace, à organiser leur activité de publication et à comprendre comment optimiser leur profil pour atteindre leurs objectifs.
-```
 
-**Example:** "Difficulty organizing small shared trips without the complexity of national platforms, lack of trust for carpooling with strangers over short distances, waste of empty seats in cars for recurring neighborhood trips."
+**Example :** "Difficulté à organiser des petits trajets partagés sans la complexité des plateformes nationales, manque de confiance pour le covoiturage avec des inconnus sur de courtes distances, gaspillage de places vides dans les voitures pour les trajets récurrents dans le quartier."
 
 ### 4. Proposed Solution (How the Project Solves the Problem)
 
-```
 Linked-Pedia offre une suite d'outils basés sur l'IA pour générer et optimiser des posts, organiser les publications, analyser les performances et fournir des recommandations personnalisées pour l'amélioration du profil et de la stratégie de contenu LinkedIn.
-```
 
-**Example:** "By creating a trust network based on locality, with a simple interface to offer/search for trips instantly, and verified profiles (optional) within a neighborhood community."
+**Example:** "En créant une plateforme tout-en-un spécialisée LinkedIn qui automatise la création de contenu, optimise les publications grâce à l'IA, et fournit des analyses détaillées pour améliorer la performance des posts et du profil."
 
 ## SECTION B: KEY FEATURES (INITIAL MVP)
 
@@ -93,35 +85,27 @@ _Purpose: Guide AI proposals for Sections 1.10, 5.1, 5.2, 5.4 of the PRD_
 
 ### 1. General "Vibe" and Desired Aesthetics
 
-```
 Professionnel, épuré et moderne. L'interface doit être intuitive et facile à naviguer. Pas d'inspiration spécifique pour l'instant, mais quelque chose de propre et fonctionnel.
-```
 
-**Example:** "I want something very simple, intuitive, with a modern and reassuring design. Soft colors. Inspiration: a mix between the 'Nextdoor' app for the local aspect and 'BlaBlaCar' for the simplicity of trip proposals."
+**Example:** "Je souhaite quelque chose de très simple, intuitif, avec un design moderne et rassurant. Des couleurs douces. Inspiration : un mélange entre l'application 'Nextdoor' pour l'aspect local et 'BlaBlaCar' pour la simplicité des propositions de trajets."
 
 ### 2. Primary Target Audience (First Intuition)
 
-```
 Professionnels cherchant à développer leur marque personnelle ou leur activité sur LinkedIn, incluant potentiellement des ghostwriters gérant plusieurs comptes clients.
-```
 
-**Example:** "Residents of the same neighborhood or small town, especially families for school/activity trips, and people looking to save money or reduce their ecological footprint for local errands."
+**Exemple :** "Résidents d'un même quartier ou d'une petite ville, particulièrement les familles pour les trajets scolaires/activités, et les personnes souhaitant économiser ou réduire leur empreinte écologique pour les courses locales."
 
 ### 3. Technology Stack (If you have strong preferences or constraints)
 
 The Agentic PRD suggests as a default: Next.js, Supabase, Tailwind CSS. However, the final technology choices can be adapted by the user.
 
-```
 Next.js 15 est une exigence. Pour le reste, la stack par défaut (Supabase, Tailwind CSS) semble appropriée, sauf si des besoins spécifiques pour l'intégration LinkedIn ou l'IA suggèrent d'autres outils.
-```
 
 **Example:** "The default stack works perfectly for me. Perhaps explore using [Library X] for mapping if needed."
 
 ### 4. Anticipated Third-Party Integrations / MCPs (If clear ideas already exist)
 
-```
 Intégration majeure avec l'API LinkedIn pour la publication, la programmation et l'analyse des posts, ainsi que l'audit de profil. Utilisation potentielle d'outils d'IA (via MCPs) pour la génération et l'optimisation de texte, l'analyse de tendances.
-```
 
 **Example:** "Probably a mapping service to visualize trips (e.g., Mapbox or Google Maps via MCP). Push notifications for new trip proposals."
 
@@ -131,27 +115,19 @@ _Purpose: Anticipate points to explore further_
 
 ### 1. What are the biggest risks or uncertainties for this project at this stage?
 
-```
 La complexité de l'intégration avec l'API LinkedIn et les limitations potentielles de celle-ci. La précision et la pertinence des suggestions générées par l'IA. L'adoption par les utilisateurs et la monétisation.
-```
 
 ### 2. How could this project generate value (for users, for you/the company)?
 
-```
 Pour les utilisateurs : Gain de temps dans la création de contenu, amélioration de l'engagement et de la visibilité sur LinkedIn, croissance du réseau et des opportunités professionnelles. Pour l'entreprise : Revenus via un modèle d'abonnement, acquisition d'utilisateurs grâce à une proposition de valeur unique.
-```
 
 ### 3. Are there any direct or indirect competitors that you already know of?
 
-```
 Des outils de gestion des réseaux sociaux (Hootsuite, Buffer), des générateurs de contenu basés sur l'IA (Jasper, Copy.ai), des services d'audit de profil LinkedIn. Cependant, une solution tout-en-un spécifiquement axée sur LinkedIn avec des fonctionnalités d'IA avancées semble moins courante.
-```
 
 ### 4. On a scale of 1 to 10, how clear is this idea to you (1=very vague, 10=very clear)? Which aspects are the most unclear?
 
-```
 8/10. Les aspects les plus clairs sont les fonctionnalités principales. Les aspects les moins clairs concernent les détails techniques de l'intégration LinkedIn et la mise en œuvre précise des algorithmes d'IA pour l'analyse des tendances et l'optimisation personnalisée.
-```
 
 ## Instructions for the Next Step
 

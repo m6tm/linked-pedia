@@ -18,7 +18,7 @@ Les principaux composants incluent le frontend Next.js, la suite backend de Supa
 
 - **Framework:** Next.js 15 (avec App Router, TypeScript)
 - **Key Libraries:** React, Tailwind CSS, Shadcn/ui (personnalisé), librairies auxiliaires sélectionnées par l'Agent IA pour des besoins spécifiques (ex: gestion de formulaires, validation).
-- **State Management:** Approche standard React/Next.js (Context API, hooks) pour la gestion de l'état local et global.
+- **State Management:** Approche standard React/Next.js (Zustand, hooks) pour la gestion de l'état local et global.
 - **UI Component Structure:** Suivra les principes de l'Atomic Design pour une meilleure organisation et réutilisabilité des composants.
 
 ### Backend
@@ -42,29 +42,29 @@ Les principaux composants incluent le frontend Next.js, la suite backend de Supa
 
 ```mermaid
 graph TD
-    A[Utilisateur] --> B(Navigateur Web);
-    B --> C[Frontend Next.js 15];
-    C --> |Appels API| D[Supabase Edge Functions];
-    C --> |SDK Auth| E[Supabase Auth];
-    C --> |SDK DB| F[Supabase Database (PostgreSQL)];
-    C --> |SDK Storage| G[Supabase Storage];
-    D --> |Requêtes DB| F;
-    D --> |Appels API| H[API LinkedIn];
-    D --> |Appels API/MCP| I[Services IA (Génération, Optimisation, Tendances)];
-    D --> |Appels API/MCP| J[Autres Services Tiers/MCPs];
-    E --> F;
+    A[Utilisateur] --> B[Navigateur Web]
+    B --> C[Frontend Next.js 15]
+    C --> |Appels API| D[Supabase Edge Functions]
+    C --> |SDK Auth| E[Supabase Auth]
+    C --> |SDK DB| F[Supabase DB]
+    C --> |SDK Storage| G[Supabase Storage]
+    D --> |Requêtes DB| F
+    D --> |Appels API| H[API LinkedIn]
+    D --> |Appels API/MCP| I[Services IA]
+    D --> |Appels API/MCP| J[Services Tiers]
+    E --> F
 
-    subgraph Backend (Supabase)
-        D; E; F; G
+    subgraph Backend[Backend Supabase]
+        D & E & F & G
     end
 
-    subgraph Services Externes
-        H; I; J
+    subgraph External[Services Externes]
+        H & I & J
     end
 
     style C fill:#D5F5E3,stroke:#333,stroke-width:2px
     style Backend fill:#AED6F1,stroke:#333,stroke-width:2px
-    style Services Externes fill:#FADBD8,stroke:#333,stroke-width:2px
+    style External fill:#FADBD8,stroke:#333,stroke-width:2px
 ```
 
 ## Key Design Decisions
